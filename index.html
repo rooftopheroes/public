@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooftop Heroes | Roof Replacement & Storm Restoration</title>
+  <meta
+    name="description"
+    content="Rooftop Heroes is a Metro-Detroit roofing company specializing in residential and commercial roof replacement, storm damage restoration, and free inspections."
+  />
+  
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" />
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" />
+  <!-- Open Graph / Facebook / LinkedIn / iMessage / Slack -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rooftop Heroes | Roofing & Storm Restoration" />
+  <meta property="og:description" content="Metro-Detroit roofing — residential, commercial, and storm restoration. Free inspections and written estimates." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.jpg" />
+  
+  
+  <style>
+    :root{--bg:#0a1020;--bg-2:#0f1730;--surface:rgba(255,255,255,.06);--surface-2:rgba(255,255,255,.09);--line:rgba(255,255,255,.12);--text:#edf4ff;--muted:#a9b5c9;--primary:#ffcc00;--primary-2:#ffd700;--accent:#42b8ff;--success:#47d8a4;--shadow:0 20px 70px rgba(0,0,0,.35);--radius-xl:28px;--radius-lg:22px;--radius-md:16px;--radius-sm:12px;--max:1200px;--nav-h:80px;}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;color:var(--text);background:radial-gradient(circle at top left, rgba(66,184,255,.16), transparent 28%),radial-gradient(circle at top right, rgba(255,106,42,.12), transparent 26%),linear-gradient(180deg, #09101d 0%, #0b1120 50%, #10192f 100%);line-height:1.55;}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    input, textarea, select, button{font:inherit}
+    select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:linear-gradient(45deg, transparent 50%, #d9e6fb 50%),linear-gradient(135deg, #d9e6fb 50%, transparent 50%);background-position:calc(100% - 20px) calc(50% - 3px),calc(100% - 14px) calc(50% - 3px);background-size:6px 6px, 6px 6px;background-repeat:no-repeat;padding-right:42px !important;}
+    select option{color:#0d1528;background:#f3f7ff;}
+    .container{width:min(var(--max), calc(100% - 32px));margin:0 auto;}
+    .section{padding:90px 0;position:relative;}
+    .eyebrow{display:inline-block;margin-bottom:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:.78rem;}
+    .section-title{margin:0 0 14px;font-size:clamp(2rem, 4vw, 3.2rem);line-height:1.03;letter-spacing:-.04em;}
+    .section-copy{margin:0;color:var(--muted);max-width:760px;font-size:1.04rem;}
+    .grid{display:grid;gap:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);backdrop-filter:blur(16px);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:800;border:1px solid transparent;cursor:pointer;transition:.25s ease;white-space:nowrap;}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{color:#0a1020;background:linear-gradient(135deg, var(--primary), var(--primary-2));box-shadow:0 14px 28px rgba(255,204,0,.28);}
+    .btn-secondary{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.05);}
+    .btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .btn-block{width:100%}
+    .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--muted);font-size:.92rem;backdrop-filter:blur(10px);}
+    .pill-dot{width:8px;height:8px;border-radius:999px;background:var(--success);box-shadow:0 0 0 6px rgba(71,216,164,.12);}
+    .nav-wrap{position:sticky;top:0;z-index:1000;backdrop-filter:blur(14px);background:rgba(8, 12, 22, .72);border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:18px;}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0;}
+    .brand-mark{width:50px;height:50px;border-radius:16px;overflow:hidden;flex-shrink:0;border:1px solid var(--line);
+	background: linear-gradient(
+  135deg,
+  #ffd700 0%,
+  #ffcc00 50%,
+  #ffd700 100%
+);
+}
+    .brand-mark img{width:100%;height: auto;  margin-top: 50%; transform: translateY(-50%);}
+    .brand-title{margin:0;font-size:1rem;font-weight:900;letter-spacing:-.02em;}
+    .brand-sub{margin:0;color:var(--muted);font-size:.82rem;}
+    .nav-links{display:flex;align-items:center;gap:26px;}
+    .nav-links a{color:var(--muted);font-weight:700;font-size:.95rem;}
+    .nav-links a:hover, .nav-links a.active{color:#fff;}
+    .nav-actions{display:flex;align-items:center;gap:10px;}
+    .menu-btn{display:none;width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;}
+    .mobile-menu{display:none;flex-direction:column;gap:8px;padding:14px;margin-bottom:14px;border:1px solid var(--line);border-radius:20px;background:rgba(7,12,22,.95);box-shadow:var(--shadow);}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:14px;border-radius:14px;color:var(--muted);}
+    .mobile-menu a:hover{color:#fff;background:rgba(255,255,255,.05);}
+    .hero{padding:44px 0 88px;overflow:hidden;}
+    .dev-banner{margin:8px 0 26px;padding:18px 22px;border:1px solid rgba(255,255,255,.14);border-radius:22px;background:linear-gradient(135deg, rgba(255,106,42,.14), rgba(66,184,255,.14)),rgba(255,255,255,.05);box-shadow:var(--shadow);backdrop-filter:blur(14px);}
+    .dev-banner strong{display:block;margin-bottom:6px;font-size:1rem;letter-spacing:-.02em;}
+    .dev-banner span{display:block;color:var(--muted);font-size:.96rem;}
+    .dev-banner .dev-meta{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;min-height:calc(100vh - var(--nav-h) - 40px);}
+    .hero-copy h1{margin:18px 0 22px;font-size:clamp(3rem, 7vw, 6rem);line-height:1.02;letter-spacing:-.055em;}
+    .hero-copy p{margin:0 0 28px;color:var(--muted);max-width:660px;font-size:1.08rem;}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;}
+    .hero-points{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:14px;margin-top:14px;}
+    .point{padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.05);}
+    .point strong{display:block;margin-bottom:6px;font-size:1.35rem;letter-spacing:-.03em;}
+    .point span{color:var(--muted);font-size:.92rem;}
+    .hero-visual{position:relative;}
+    .hero-frame{position:relative;display:flex;flex-direction:column;gap:12px;border-radius:30px;overflow:visible;padding:20px; margin-right: -100px; border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));}
+    .hero-image{position:absolute;inset:10px;border-radius:24px;background:linear-gradient(180deg, rgba(8,12,22,.12), rgba(8,12,22,.52)),url('https://picsum.photos/seed/roof-hero/1200/1400') center/cover no-repeat;}
+    .glass{background:rgba(7,12,22,.58);border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);backdrop-filter:blur(14px);}
+    .mini-badge{padding:14px 16px;border-radius:18px;display:flex;gap:10px;align-items:flex-start;}
+    .mini-badge small{display:block;color:var(--muted);font-size:.8rem;}
+    .mini-badge strong{display:block;margin-top:3px;font-size:.97rem;}
+    .hero-top{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+    .hero-bottom{position:relative;z-index:2;}
+    .hero-side-stack{display:flex;flex-direction:column;gap:12px;}
+    .quote-card{padding:20px;border-radius:22px;}
+    .quote-card form{display:flex;flex-direction:column;gap:10px;}
+    .quote-card h3{margin:0 0 8px;font-size:1.22rem;}
+    .quote-card p{margin:0 0 14px;color:var(--muted);font-size:.93rem;}
+    .quote-card .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0;align-items:stretch;}
+    .quote-card input, .quote-card select, .quote-card textarea, .contact-form input, .contact-form select, .contact-form textarea{width:100%;min-width:0;min-height:54px;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px;outline:none;}
+    .quote-card textarea, .contact-form textarea{resize:vertical;min-height:110px;}
+    .quote-card input::placeholder, .quote-card textarea::placeholder, .contact-form input::placeholder, .contact-form textarea::placeholder{color:#b6c3d8;}
+    .quote-card input:focus, .quote-card select:focus, .quote-card textarea:focus, .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{border-color:rgba(66,184,255,.6);box-shadow:0 0 0 4px rgba(66,184,255,.12);}
+    .hero-stat{padding:18px 20px;border-radius:22px;}
+    .hero-stat h4{margin:0;line-height:1;font-size:2rem;}
+    .hero-stat p{margin:8px 0 0;color:var(--muted);font-size:.88rem;}
+    .trust-grid{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:16px;margin-top:-18px;position:relative;z-index:2;}
+    .trust-item{padding:22px;text-align:center;}
+    .trust-item strong{display:block;margin-bottom:8px;font-size:1.08rem;}
+    .trust-item span{color:var(--muted);font-size:.93rem;}
+    .services-grid{grid-template-columns:repeat(3, minmax(0,1fr));margin-top:34px;}
+    .service-card{padding:28px;position:relative;overflow:hidden;}
+    .service-card::after{content:"";position:absolute;inset:auto -30px -30px auto;width:140px;height:140px;background:radial-gradient(circle, rgba(255,106,42,.16), transparent 64%);pointer-events:none;}
+    .icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px;font-size:1.35rem;background:rgba(255,255,255,.06);border:1px solid var(--line);}
+    .service-card h3{margin:0 0 10px;font-size:1.22rem;}
+    .service-card p{margin:0 0 16px;color:var(--muted);}
+    .checks{list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+    .checks li{display:flex;gap:10px;color:#dce6f7;font-size:.95rem;}
+    .checks li::before{content:"✓";color:var(--success);font-weight:900;}
+    .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:center;}
+    .image-panel{min-height:570px;border-radius:28px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow);background: linear-gradient(180deg, rgba(7,12,22,.08), rgba(7,12,22,.5)),
+url('https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.png')
+calc(50% + 30px) center / cover no-repeat;}
+    .image-note{position:absolute;left:22px;right:22px;bottom:22px;padding:18px;border-radius:20px;background:rgba(7,12,22,.62);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);}
+    .image-note strong{display:block;margin-bottom:6px;font-size:1.08rem;}
+    .image-note span{color:var(--muted);font-size:.94rem;}
+    .feature-stack{display:grid;gap:16px;margin-top:28px;}
+    .feature{padding:20px;display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;}
+    .feature .num{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-weight:900;color:var(--accent);background:rgba(255,255,255,.06);border:1px solid var(--line);}
+    .feature h3{margin:0 0 8px;font-size:1.06rem;}
+    .feature p{margin:0;color:var(--muted);}
+    .process-grid, .cert-grid, .review-grid, .project-grid{grid-template-columns:repeat(3, minmax(0,1fr));margin-top:34px;}
+    .process-card, .cert-card, .review-card{padding:26px;}
+    .process-card h3, .cert-card h3{margin:0 0 10px;font-size:1.15rem;}
+    .process-card p, .cert-card p, .review-card p{margin:0;color:var(--muted);}
+    .project-card{overflow:hidden}
+    .project-thumb{aspect-ratio:16/11;background-size:cover;background-position:center;position:relative;}
+    .project-body{padding:22px;}
+    .project-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:.92rem;margin-bottom:12px;}
+    .project-body h3{margin:0 0 10px;font-size:1.18rem;}
+    .project-body p{margin:0;color:var(--muted);}
+    .stars{color:#ffd15d;letter-spacing:.15em;margin-bottom:16px;font-size:1rem;}
+    .person{display:flex;align-items:center;gap:14px;margin-top:18px;}
+    .avatar{width:46px;height:46px;border-radius:999px;display:grid;place-items:center;font-weight:900;color:var(--accent);background:rgba(255,255,255,.06);border:1px solid var(--line);}
+    .person small{display:block;margin-top:2px;color:var(--muted);}
+    .service-area{padding:30px;margin-top:34px;}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+    .chip{padding:10px 14px;border-radius:999px;color:#dce6f7;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.92rem;}
+    .finance-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch;margin-top:34px;}
+    .finance-card, .finance-side{padding:28px;}
+    .finance-list{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;}
+    .finance-list li{display:flex;gap:12px;color:#dbe6f8;}
+    .finance-list li::before{content:"•";color:var(--primary);font-size:1.3rem;line-height:1;}
+    .finance-side h3{margin:0 0 10px;font-size:1.24rem;}
+    .finance-side p{margin:0 0 18px;color:var(--muted);}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px;align-items:start;}
+    .faq-list{display:grid;gap:14px;}
+    .faq-item{overflow:hidden}
+    .faq-q{width:100%;padding:22px;display:flex;justify-content:space-between;gap:16px;text-align:left;color:#fff;background:transparent;border:0;cursor:pointer;font-weight:800;}
+    .faq-q span:last-child{color:var(--accent);font-size:1.2rem;line-height:1;}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease;padding:0 22px;color:var(--muted);}
+    .faq-item.open .faq-a{max-height:600px;padding:0 22px 22px;}
+    .faq-side{padding:28px;min-height:100%;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)),url('https://picsum.photos/seed/roof-inspection/900/1100') center/cover no-repeat;background-blend-mode:overlay;display:flex;align-items:end;}
+    .faq-side .inner{width:100%;padding:22px;border-radius:20px;background:rgba(7,12,22,.62);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);}
+    .faq-side h3{margin:0 0 10px;font-size:1.36rem;}
+    .faq-side p{margin:0 0 18px;color:var(--muted);}
+    .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;margin-top:34px;}
+    .contact-card, .contact-form{padding:28px;}
+    .contact-list{display:grid;gap:16px;margin-top:22px;}
+    .contact-row{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;padding:14px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);}
+    .contact-icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.2rem;background:rgba(255,255,255,.06);border:1px solid var(--line);}
+    .contact-row strong{display:block;margin-bottom:2px;}
+    .contact-row span, .contact-row a{color:var(--muted);}
+    .contact-form form{display:grid;gap:12px;}
+    .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .fine-print{color:var(--muted);font-size:.88rem;margin:8px 0 0;}
+    .cta-box{padding:34px;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow);background:radial-gradient(circle at left center, rgba(66,184,255,.16), transparent 30%),radial-gradient(circle at right center, rgba(255,106,42,.18), transparent 34%),linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));}
+    .cta-inner{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .cta-box h2{margin:0 0 8px;font-size:clamp(2rem, 4vw, 3rem);letter-spacing:-.04em;}
+    .cta-box p{margin:0;color:var(--muted);max-width:760px;}
+    footer{padding:26px 0 96px;color:var(--muted);}
+    .footer-grid{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line);}
+    .footer-links{display:flex;flex-wrap:wrap;gap:18px;}
+    .footer-links a:hover{color:#fff}
+    .sticky-cta{position:fixed;left:16px;right:16px;bottom:14px;z-index:999;display:none;}
+    .sticky-cta .inner{display:flex;gap:10px;padding:12px;border-radius:18px;background:rgba(7,12,22,.84);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);box-shadow:var(--shadow);}
+    .sticky-cta .btn{flex:1;padding:14px 16px;}
+    .reveal{opacity:0;transform:translateY(24px);transition:.7s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media (max-width:1080px){
+      .hero-grid, .split, .faq-grid, .contact-grid, .finance-grid{grid-template-columns:1fr;}
+      .services-grid, .process-grid, .cert-grid, .review-grid, .project-grid, .trust-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
+      .hero-frame{margin-right:0;}
+    }
+    @media (max-width:860px){
+      .nav-links, .desktop-only{display:none !important;}
+      .menu-btn{display:inline-grid;place-items:center;}
+    }
+    @media (max-width:640px){
+      .section{padding:72px 0}
+      .hero{padding-top:24px}
+      .hero-copy h1{font-size:clamp(2.5rem, 13vw, 4.3rem)}
+      .hero-points, .services-grid, .process-grid, .cert-grid, .review-grid, .project-grid, .trust-grid, .row-2, .quote-card .row{grid-template-columns:1fr;}
+      .hero-frame{padding:0;margin-right:0;border:none;background:none;box-shadow:none;}
+      .hero-image{display:none;}
+      .hero-top{display:contents;}
+      .hero-stat{order:1;}
+      .sticky-cta{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Rooftop Heroes home">
+        <div class="brand-mark"><img src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo" /></div>
+        <div>
+          <p class="brand-title">Rooftop Heroes</p>
+          <p class="brand-sub">Roofing • Replacement • Restoration</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+17342011000" class="btn btn-secondary desktop-only">(734) 201-1000</a>
+        <a href="#contact" class="btn btn-primary desktop-only">Free Estimate</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+17342011000" class="btn btn-secondary">(734) 201-1000</a>
+        <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+	
+	
+      <div class="container">
+        <div class="dev-banner reveal" role="note" aria-label="Development preview notice">
+          <strong>Development Preview Website</strong>
+          <span>This website is currently in an active development build for design review, copy refinement, and feature testing. Branding, imagery, lead routing, content, and integrations may still change before launch.</span>
+          <div class="dev-meta">
+            <div class="pill">Professional review build</div>
+            <div class="pill">Estimated go-live: May 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Residential and commercial roofing done with speed, care, and craftsmanship
+          </div>
+
+          <h1>Roofing that protects your home and your peace of mind.</h1>
+         <p>From storm restorations to full roof replacements, Rooftop Heroes delivers durable roofing systems backed by transparent pricing, premium materials, and a crew that treats every property like our own. Family-owned and trusted across Metro-Detroit since 2008.</p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Schedule a Free Inspection</a>
+            <a href="#projects" class="btn btn-secondary">See Recent Projects</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="point">
+              <strong>1,250+</strong>
+              <span>Roofing projects completed across homes, businesses, and managed properties</span>
+            </div>
+            <div class="point">
+              <strong>Insurance</strong>
+              <span>Full claim documentation and coordination after hail and storm damage events</span>
+            </div>
+            <div class="point">
+              <strong>5-Star</strong>
+              <span>Customer-first communication, clean jobsites, and dependable follow-through</span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="hero-visual reveal" style="max-width: 457px;">
+          <div class="hero-frame">
+            <div class="hero-image" aria-label="Recently completed Rooftop Heroes project"></div>
+
+            <div class="hero-top">
+              <div class="hero-side-stack">
+                <div class="mini-badge glass">
+                  <div>🛡️</div>
+                  <div>
+                    <small>Trust signal</small>
+                    <strong>Licensed • Insured • Warranty-backed</strong>
+                  </div>
+                </div>
+
+                <div class="mini-badge glass">
+                  <div>⛈️</div>
+                  <div>
+                    <small>Storm support</small>
+                    <strong>Insurance claim documentation assistance</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-stat glass">
+				  <h4>Same Day</h4>
+				  <p>Most written estimates can be provided on the spot, or emailed within 24 hours.</p>
+				</div>
+            </div>
+
+            <div class="hero-bottom">
+              <div class="quote-card glass">
+                <h3>Get a fast quote</h3>
+                <p>Tell us a bit about your project and we'll be in touch within one business hour.</p>
+
+                <form id="heroLeadForm">
+                  <div class="row">
+                    <input type="text" name="hero_name" placeholder="Full name" required />
+                    <input type="tel" name="hero_phone" placeholder="Phone number" required />
+                  </div>
+
+                  <div class="row">
+                    <input type="email" name="hero_email" placeholder="Email address" />
+                    <select name="hero_service" required>
+                      <option value="" selected disabled>Service needed</option>
+                      <option value="Roof Replacement">Roof Replacement</option>
+                      <option value="Storm Damage">Storm Damage</option>
+                      <option value="Commercial Roofing">Commercial Roofing</option>
+                      <option value="Free Inspection">Free Inspection</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">Request Free Estimate</button>
+                </form>
+              </div>
+            </div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+          </div>
+        </div>
+      </div>
+<br><br><br>
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item card reveal">
+            <strong>Premium Materials</strong>
+            <span>Shingles, metal systems, flat roof solutions, flashing, and ventilation upgrades</span>
+          </div>
+          <div class="trust-item card reveal">
+            <strong>Honest Recommendations</strong>
+            <span>Straightforward guidance on materials, timing, and the right replacement system for your property</span>
+          </div>
+          <div class="trust-item card reveal">
+            <strong>Clean Job Sites</strong>
+            <span>Protection for landscaping, magnetic nail sweep, and detailed cleanup standards</span>
+          </div>
+          <div class="trust-item card reveal">
+            <strong>Clear Communication</strong>
+            <span>Updates before, during, and after the project so customers always know the status</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h2 class="section-title reveal">Professional roofing services Metro-Detroit relies on</h2>
+        <p class="section-copy reveal">Whether we're replacing a single-family residential roof or re-roofing a multi-tenant commercial property, every project receives the same craftsmanship, communication, and clean-jobsite standards. Here's what we do best.</p>
+
+ <div class="grid services-grid">
+
+          <article class="service-card card reveal">
+			  <div class="icon">🏠</div>
+			  <h3>Residential Roof Replacement</h3>
+			  <p>Tear-off and full re-roof projects across the entire range of residential systems — from architectural asphalt to premium standing seam metal and natural cedar.</p>
+			  <ul class="checks">
+				<li>Architectural asphalt shingle systems</li>
+				<li>Standing seam steel and aluminum</li>
+				<li>Cedar shake and composite cedar</li>
+				<li>Ventilation and decking review</li>
+			  </ul>
+			</article>
+
+          <article class="service-card card reveal">
+            <div class="icon">🌩️</div>
+            <h3>Storm Restoration</h3>
+            <p>Fast response after hail, wind, and severe weather, with experienced crews who help you navigate the entire restoration process.</p>
+            <ul class="checks">
+              <li>Damage assessment</li>
+              <li>Tarping and emergency stabilization</li>
+              <li>Insurance documentation support</li>
+            </ul>
+          </article>
+		  
+		 
+		<article class="service-card card reveal">
+		  <div class="icon">🏢</div>
+		  <h3>Commercial & Low-Slope Roofing</h3>
+		  <p>Full replacement systems engineered for flat and low-slope buildings — from retail and industrial facilities to multi-tenant commercial portfolios.</p>
+		  <ul class="checks">
+			<li>EPDM rubber membrane systems</li>
+			<li>Torch-down modified bitumen</li>
+			<li>Peel-and-stick (self-adhered) systems</li>
+			<li>Property manager coordination</li>
+		  </ul>
+		</article>
+
+          <article class="service-card card reveal">
+            <div class="icon">🧰</div>
+            <h3>Preventive Maintenance</h3>
+            <p>Annual inspections and proactive maintenance that catch small issues before they become expensive problems.</p>
+            <ul class="checks">
+              <li>Annual roof health checks</li>
+              <li>Drainage and seal review</li>
+              <li>Photo documentation</li>
+            </ul>
+          </article>
+		  
+		  <article class="service-card card reveal">
+			  <div class="icon">🔍</div>
+			  <h3>Free Roof & Attic Inspection</h3>
+			  <p>A complete on-site evaluation including full attic inspection to asess potential wood replacement needs and check insulation R-value.</p>
+			  <ul class="checks">
+				<li>Exterior roof condition report</li>
+				<li>Attic decking and insulation R-value assessment</li>
+				<li>Written estimate delivered on-site or within 24 hours</li>
+				<li>No-pressure consultation</li>
+			  </ul>
+			</article>
+
+          <article class="service-card card reveal">
+            <div class="icon">💧</div>
+            <h3>Gutters & Exterior Add-Ons</h3>
+            <p>Seamless gutters, gutter guards, skylights, fascia work, and ventilation upgrades to round out your exterior.</p>
+            <ul class="checks">
+              <li>Gutter replacement</li>
+              <li>Skylight and flashing work</li>
+              <li>Exterior trim improvements</li>
+            </ul>
+          </article>
+		  
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us">
+      <div class="container split">
+        <div class="image-panel reveal">
+          <div class="image-note">
+            <strong>Cherry Hill Estate, Northville</strong>
+            <span>6,800 sq ft architectural shingle replacement completed in three days, on time and under budget.</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Why choose us</span>
+          <h2 class="section-title reveal">Why Metro-Detroit homeowners trust Rooftop Heroes</h2>
+          <p class="section-copy reveal">Hiring a roofer is about trust as much as it is about shingles. Here's how we earn yours on every project we take on.</p>
+
+          <div class="feature-stack">
+            <div class="feature card reveal">
+              <div class="num">01</div>
+              <div>
+                <h3>Detailed inspections with clear recommendations</h3>
+                <p>Every inspection includes detailed photos, plain-language findings, and honest next steps — so you know exactly what you're paying for and why.</p>
+              </div>
+            </div>
+
+            <div class="feature card reveal">
+              <div class="num">02</div>
+              <div>
+                <h3>Fast communication from estimate to completion</h3>
+                <p>You'll have a dedicated project lead, same-day responses, and proactive updates at every milestone of the build.</p>
+              </div>
+            </div>
+
+            <div class="feature card reveal">
+              <div class="num">03</div>
+              <div>
+                <h3>Workmanship that protects the property, not just the roof</h3>
+                <p>Landscape protection, magnetic nail sweeps, and meticulous cleanup are standard on every job — never an upcharge or an afterthought.</p>
+              </div>
+            </div>
+
+            <div class="feature card reveal">
+              <div class="num">04</div>
+              <div>
+                <h3>Built for residential and commercial confidence</h3>
+                <p>From single-family homes to multi-tenant commercial buildings, our crews are equipped and experienced for projects of every size and complexity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Process</span>
+        <h2 class="section-title reveal">A simple, three-step process from first call to final shingle</h2>
+        <p class="section-copy reveal">No surprises, no high-pressure sales, no jargon. Just a straightforward path to a roof you can stop worrying about.</p>
+
+        <div class="grid process-grid">
+          <div class="process-card card reveal">
+            <h3>1. Inspect</h3>
+            <p>We start with an on-site inspection, photograph everything, and document the issue or full project scope in plain language.</p>
+          </div>
+          <div class="process-card card reveal">
+            <h3>2. Recommend</h3>
+            <p>You'll receive a written estimate with replacement options, materials, timing, and expected outcomes — all in one place.</p>
+          </div>
+          <div class="process-card card reveal">
+            <h3>3. Deliver</h3>
+            <p>Our crew completes the work cleanly and professionally, then walks you through a final review so you can sign off with full confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Credentials</span>
+        <h2 class="section-title reveal">Credentials that back every project we deliver</h2>
+        <p class="section-copy reveal">Decades of training, manufacturer partnerships, and warranty-backed work give you confidence the job is done right the first time.</p>
+
+        <div class="grid cert-grid">
+          <div class="cert-card card reveal">
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed in Michigan with comprehensive general liability and workers' compensation insurance carried on every crew, every job.</p>
+          </div>
+          <div class="cert-card card reveal">
+			  <h3>Manufacturer-Aligned Systems</h3>
+			  <p>Trained installers for GAF, Owens Corning, and CertainTeed shingle systems, standing seam metal applications, and leading EPDM and modified bitumen manufacturers for low-slope commercial work.</p>
+			</div>
+          <div class="cert-card card reveal">
+            <h3>Warranty Support</h3>
+            <p>Industry-leading 10-year workmanship warranty paired with manufacturer material warranties of up to 50 years on qualifying systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h2 class="section-title reveal">Recent work from across Metro-Detroit</h2>
+        <p class="section-copy reveal">A look at recent jobs in your area, from storm restorations to full commercial re-roofs, all completed by our in-house crews.</p>
+
+        <div class="grid project-grid">
+          <article class="project-card card reveal">
+            <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/roof-residential/800/550');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Residential</span>
+                <span>Full replacement</span>
+              </div>
+              <h3>Northville colonial — full re-roof</h3>
+              <p>38 squares of GAF Timberline HDZ shingles installed in two days, with full ridge ventilation upgrade and new ice-and-water shield throughout.</p>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/roof-storm/800/550');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Storm damage</span>
+                <span>Insurance support</span>
+              </div>
+              <h3>Bloomfield Hills hail restoration</h3>
+              <p>Full inspection and damage documentation after a July hail event, coordinated end-to-end through the homeowner's insurance carrier.</p>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+			  <div class="project-thumb" style="background-image:url('https://picsum.photos/seed/roof-commercial/800/550');"></div>
+			  <div class="project-body">
+				<div class="project-meta">
+				  <span>Commercial</span>
+				  <span>Full replacement</span>
+				</div>
+				<h3>Troy office park — EPDM replacement</h3>
+				<p>32,000 sq ft EPDM membrane replacement completed across two weekends to minimize disruption for the property management team and tenants on-site.</p>
+			  </div>
+			</article>
+        </div>
+
+        <div class="service-area card reveal">
+          <strong style="display:block;font-size:1.2rem;">Service areas</strong>
+          <p style="margin:10px 0 0;color:var(--muted);">Proudly serving homeowners and businesses across Metro-Detroit and the surrounding communities.</p>
+          <div class="chips">
+            <span class="chip">Northville</span>
+            <span class="chip">Novi</span>
+            <span class="chip">Plymouth</span>
+            <span class="chip">Livonia</span>
+            <span class="chip">Farmington Hills</span>
+            <span class="chip">Bloomfield Hills</span>
+            <span class="chip">Troy</span>
+            <span class="chip">Royal Oak</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <span class="eyebrow">Reviews</span>
+        <h2 class="section-title reveal">What our customers are saying</h2>
+        <p class="section-copy reveal">Hundreds of five-star reviews from homeowners, business owners, and property managers across the region.</p>
+
+        <div class="grid review-grid">
+          <div class="review-card card reveal">
+            <div class="stars">★/★★/★★★/★★★★/★★★★★</div>
+            <p>"Be the first to review us!"</p>
+            <div class="person">
+              <div class="avatar">A</div>
+              <div>
+                <strong>Name</strong>
+                <small>Homeowner • Address</small>
+              </div>
+            </div>
+          </div>
+
+  
+		
+		</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Financing</span>
+        <h2 class="section-title reveal">Flexible financing that fits your budget</h2>
+        <p class="section-copy reveal">A new roof is a major investment. We work with trusted financing partners so you can move forward without putting it off another season.</p>
+
+        <div class="finance-grid">
+          <div class="finance-card card reveal">
+            <h3 style="margin:0 0 8px;font-size:1.45rem;">Roofing on terms that work for you</h3>
+            <p style="margin:0;color:var(--muted);">Through our trusted financing partners, qualified homeowners can spread the cost of a new roof across manageable monthly payments — often with zero down.</p>
+            <ul class="finance-list">
+              <li>Monthly payments as low as $99 for qualified applicants</li>
+              <li>Zero-down options with same-day approval decisions</li>
+              <li>Full insurance claim coordination from first call to final invoice</li>
+            </ul>
+          </div>
+
+          <aside class="finance-side card reveal">
+            <h3>Free estimate. No pressure.</h3>
+            <p>Every estimate is detailed, written, and obligation-free. Honest pricing, clear scope, no pressure.</p>
+            <a href="#contact" class="btn btn-primary btn-block">Request Your Estimate</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title reveal">Answers to the questions we hear most</h2>
+        <p class="section-copy reveal">Quick answers to common roofing questions. If you don't see yours, give us a call — we're always happy to help.</p>
+
+        <div class="faq-grid">
+          <div class="faq-list">
+            <div class="faq-item card reveal open">
+              <button class="faq-q">
+                <span>How do I know if it's time to replace my roof?</span>
+                <span>−</span>
+              </button>
+              <div class="faq-a">
+                <p>It depends on your roof's age, the extent of damage, and whether issues are isolated or widespread. Our inspectors walk the roof, document everything, and give you an honest written recommendation along with a full replacement scope and estimate.</p>
+              </div>
+            </div>
+
+            <div class="faq-item card reveal">
+              <button class="faq-q">
+                <span>Do you help with storm damage claims?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                <p>Yes. We provide detailed damage documentation, photos, and measurements that your insurance adjuster needs, and we'll meet them on-site whenever possible to make the process easier.</p>
+              </div>
+            </div>
+
+            <div class="faq-item card reveal">
+			  <button class="faq-q">
+				<span>How quickly can someone inspect my roof?</span>
+				<span>+</span>
+			  </button>
+			  <div class="faq-a">
+				<p>Most inspections are scheduled within 24 to 48 hours of your call. In the majority of cases, your written estimate is delivered on-site before our team leaves your property. For projects requiring additional review, the estimate will be emailed within 24 hours.</p>
+			  </div>
+			</div>
+			
+			<div class="faq-item card reveal">
+			  <button class="faq-q">
+				<span>What roofing materials do you install?</span>
+				<span>+</span>
+			  </button>
+			  <div class="faq-a">
+				<p>For residential properties, we install architectural asphalt shingle, standing seam steel, standing seam aluminum, cedar shake, and composite cedar systems.</p
+				<p>For commercial and low-slope buildings, we install EPDM rubber membrane, torch-down modified bitumen, and peel-and-stick (self-adhered) systems.</p>
+				<p>Natural slate and TPO membrane are currently outside our installed lineup.</p>
+			  </div>
+			</div>
+			
+
+
+            <div class="faq-item card reveal">
+              <button class="faq-q">
+                <span>How long does a typical roof replacement take?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                <p>Timing depends on size, complexity, weather, and material type, but most standard residential roof replacements are completed in one to three days once scheduled.</p>
+              </div>
+            </div>
+          </div>
+		  
+		  
+
+          <aside class="faq-side reveal">
+            <div class="inner">
+              <h3>Ready for a free estimate?</h3>
+              <p>Schedule a no-pressure roof inspection and written replacement estimate. Most homeowners hear back within one business hour.</p>
+              <a href="tel:+17342011000" class="btn btn-primary">(734) 201-1000</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title reveal">Get in touch — we'll respond within the hour</h2>
+        <p class="section-copy reveal">Reach out by phone, email, or the form below. Most inquiries receive a personal response within one business hour.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card card reveal">
+            <h3 style="margin:0 0 8px;font-size:1.45rem;">Rooftop Heroes</h3>
+            <p style="margin:0;color:var(--muted);">Family-owned and locally operated, proudly serving Metro-Detroit since 2008.</p>
+
+            <div class="contact-list">
+              <div class="contact-row">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+17342011000">(734) 201-1000</a>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:team@rooftopheroes.com">team@rooftopheroes.com</a>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong>Service Area</strong>
+                  <span>Metro-Detroit and surrounding communities</span>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-icon">🕒</div>
+                <div>
+                  <strong>Hours</strong>
+                  <span>Mon–Sat: 7:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form card reveal" id="estimate123">
+            <h3 style="margin:0 0 8px;font-size:1.4rem;">Request a free estimate</h3>
+            <p style="margin:0 0 18px;color:var(--muted);">Fill out the form below and we'll be in touch within one business hour to schedule your free roof inspection.</p>
+
+            <form id="estimateForm">
+              <div class="row-2">
+                <input type="text" name="name" placeholder="Full name" required />
+                <input type="tel" name="phone" placeholder="Phone number" required />
+              </div>
+              <div class="row-2">
+                <input type="email" name="email" placeholder="Email address" required />
+                <input type="text" name="address" placeholder="Property address" />
+              </div>
+              <div class="row-2">
+                <select name="service">
+                  <option selected>Select service</option>
+                  <option>Roof Replacement</option>
+                  <option>Commercial Roofing</option>
+                  <option>Storm Damage Inspection</option>
+                  <option>Free Roof Inspection</option>
+                </select>
+                <select name="timeline">
+                  <option selected>Desired timeline</option>
+                  <option>Urgent / ASAP</option>
+                  <option>Within 1–2 weeks</option>
+                  <option>This month</option>
+                  <option>Just researching</option>
+                </select>
+              </div>
+              <textarea name="message" placeholder="Tell us about your roof and project"></textarea>
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+              <p class="fine-print">By submitting this form, you agree to be contacted by Rooftop Heroes regarding your roofing project. We respect your privacy and never share your information with third parties.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="cta-inner">
+            <div>
+              <h2>Ready to give your roof the attention it deserves?</h2>
+              <p>Free inspections, written estimates, and zero pressure. Book yours today and find out why thousands of Metro-Detroit homeowners trust Rooftop Heroes.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Start With a Free Estimate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Rooftop Heroes. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container" style="padding-top:18px;">
+      <div class="card" style="padding:18px 20px;border-radius:20px;">
+        <strong style="display:block;margin-bottom:6px;">Family-owned. Locally rooted.</strong>
+        <span style="color:var(--muted);display:block;">Rooftop Heroes is proudly headquartered in Metro-Detroit and family-operated. Every roof we install carries the reputation of a team that lives and works in the same communities we serve.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <div class="inner">
+      <a href="tel:+17342011000" class="btn btn-secondary">Call Now</a>
+      <a href="#estimate123" class="btn btn-primary">Free Estimate</a>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a, .footer-links a');
+
+    menuBtn?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      menuBtn.textContent = mobileMenu.classList.contains("open") ? "✕" : "☰";
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        if (menuBtn) menuBtn.textContent = "☰";
+      });
+    });
+
+    document.querySelectorAll(".faq-q").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+
+        document.querySelectorAll(".faq-item").forEach(i => {
+          i.classList.remove("open");
+          const icon = i.querySelector(".faq-q span:last-child");
+          if (icon) icon.textContent = "+";
+        });
+
+        if (!isOpen) {
+          item.classList.add("open");
+          const icon = item.querySelector(".faq-q span:last-child");
+          if (icon) icon.textContent = "−";
+        }
+      });
+    });
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const link = document.querySelector('.nav-links a[href="#' + id + '"]');
+        if (entry.isIntersecting) {
+          document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+          if (link) link.classList.add("active");
+        }
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function attachDemoForm(formId, message) {
+      const form = document.getElementById(formId);
+      if (!form) return;
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        setTimeout(() => {
+          alert(message);
+          form.reset();
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }, 700);
+      });
+    }
+
+    attachDemoForm("heroLeadForm", "Lead form submitted. Connect this form to your email, CRM, or backend.");
+    attachDemoForm("estimateForm", "Estimate request submitted. Connect this form to your preferred form handler.");
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        const targetId = this.getAttribute("href");
+        if (!targetId || targetId === "#") return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        e.preventDefault();
+        const offset = 88;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
