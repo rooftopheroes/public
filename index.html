@@ -188,6 +188,26 @@ calc(50% + 30px) center / cover no-repeat;}
     .sticky-cta .btn{flex:1;padding:14px 16px;}
     .reveal{opacity:0;transform:translateY(24px);transition:.7s ease;}
     .reveal.visible{opacity:1;transform:translateY(0);}
+	.roofle-wrapper,
+  .roofle-wrapper * {
+    background: transparent !important;
+  }
+
+  .roofle-wrapper iframe {
+    width: 600px !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    display: block;
+    background: transparent !important;
+  }
+
+  /* common injected root patterns */
+  .roofle-wrapper > div {
+    width: 600px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+  }
     @media (max-width:1080px){
       .hero-grid, .split, .faq-grid, .contact-grid, .finance-grid{grid-template-columns:1fr;}
       .services-grid, .process-grid, .cert-grid, .review-grid, .project-grid, .trust-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
@@ -400,7 +420,21 @@ calc(50% + 30px) center / cover no-repeat;}
 
 	  
 
-<script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
+<div
+  style="
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    overflow: hidden;
+  "
+  class="roofle-wrapper"
+>
+  <script
+    src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY"
+    async
+  ></script>
+</div>
 
 
 <div id="visualizer" data-zip="90210"></div>
