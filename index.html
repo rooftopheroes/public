@@ -420,21 +420,29 @@ calc(50% + 30px) center / cover no-repeat;}
 
 	  
 
-<div
-  style="
+<div class="roofle-wrapper">
+  <script
+    src='https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY&settings=%7B%22backgroundFillColor%22%3A%22transparent%22%7D'
+    async>
+  </script>
+</div>
+
+<style>
+  .roofle-wrapper {
     width: 600px;
     max-width: 100%;
     margin: 0 auto;
     background: transparent;
     overflow: hidden;
-  "
-  class="roofle-wrapper"
->
-  <script
-    src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY"
-    async
-  ></script>
-</div>
+  }
+
+  .roofle-wrapper iframe#roof-quote-pro-embedded-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+</style>
 
 
 <div id="visualizer" data-zip="90210"></div>
