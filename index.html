@@ -379,7 +379,7 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Schedule a Free Inspection
       </button>
-     <button class="btn btn-y btn-lg" onclick="if(window.OC && window.OC.openQuote){window.OC.openQuote();}else if(window.roofQuote){window.roofQuote.open();}else{document.getElementById('visualize').scrollIntoView({behavior:'smooth'});}">
+    <button class="btn btn-y btn-lg" onclick="var btn=document.querySelector('.roofle-widget-button, [class*=roofle], [id*=roofle]');if(btn){btn.click();}else if(window.RoofQuotePro){window.RoofQuotePro.open();}">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Get an Instant Quote
       </button>
