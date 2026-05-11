@@ -60,6 +60,8 @@ ul{list-style:none}
 .btn-p:hover{background:var(--blue3)}
 .btn-s{background:transparent;color:#fff;border:1.5px solid var(--blue3)}
 .btn-s:hover{background:rgba(110,198,255,.08)}
+.btn-y{background:var(--yellow);color:#06111F;border:none}
+.btn-y:hover{background:var(--yellow2)}
 .btn-lg{padding:14px 26px;font-size:15px}
 
 /* NAV */
@@ -372,17 +374,20 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
       <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Just quality work</li>
     </ul>
 
-  <div class="hero-btns">
+  <div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:12px;max-width:max-content;">
       <button class="btn btn-p btn-lg" onclick="document.getElementById('contact').scrollIntoView()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Schedule a Free Inspection
       </button>
-      <button class="btn btn-s btn-lg" onclick="document.getElementById('visualize').scrollIntoView({behavior:'smooth'}); setTimeout(function(){ var el = document.getElementById('visualizer'); if(el) el.click(); }, 600);">
+      <button class="btn btn-y btn-lg" onclick="document.getElementById('visualize').scrollIntoView({behavior:'smooth'}); setTimeout(function(){ var el = document.getElementById('visualizer'); if(el) el.click(); }, 600);">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Get an Instant Quote
       </button>
-      <button class="btn btn-s btn-lg" onclick="document.getElementById('projects').scrollIntoView()">See Real Projects</button>
-  </div>
+      <button class="btn btn-s btn-lg" style="width:100%;justify-content:center;" onclick="document.getElementById('projects').scrollIntoView()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        See Real Projects
+      </button>
+    </div>
     
   </div>
   <div class="hero-img-wrap">
