@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rooftop Heroes — Built for Michigan. Backed by Integrity.</title>
+<meta name="description" content="Rooftop Heroes is a Metro-Detroit roofing company specializing in residential and commercial roof replacement, storm damage restoration, and free inspections.">
+
+<!-- Favicon / Apple Touch Icon -->
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+
+<!-- Open Graph / Facebook / LinkedIn / iMessage / Slack -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rooftop Heroes | Roofing & Storm Restoration">
+<meta property="og:description" content="Metro-Detroit roofing — residential, commercial, and storm restoration. Free inspections and written estimates.">
+<meta property="og:image" content="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.jpg">
+
+<!-- Third-party widgets -->
+<script src="https://app.roofle.com/roof-quote-pro-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
+<script src="https://apis.owenscorning.com/client/widget.js" async></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06111F;--c1:#0B1F33;--c2:#102A43;--c3:#132F4C;
+  --t1:#F4F8FF;--t2:#B9C7D8;--t3:#9FB2C7;
+  --blue:#4DA3FF;--blue3:#6EC6FF;--blueS:#5AB7FF;
+  --yellow:#FFC928;--yellow2:#FFD34D;
+  --border:rgba(110,198,255,.18);
+  --card:rgba(13,31,51,.85);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font:16px/1.6 Inter,Manrope,sans-serif;
+  background:var(--bg);color:var(--t1);overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 20%,rgba(77,163,255,.08),transparent 70%),
+    radial-gradient(ellipse 70% 60% at 85% 80%,rgba(31,122,224,.05),transparent 70%);
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+
+/* BUTTONS */
+.btn{
+  font:600 14px Inter,sans-serif;padding:11px 22px;border-radius:8px;
+  border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+  transition:.2s;white-space:nowrap;
+}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue3)}
+.btn-s{background:transparent;color:#fff;border:1.5px solid var(--blue3)}
+.btn-s:hover{background:rgba(110,198,255,.08)}
+.btn-lg{padding:14px 26px;font-size:15px}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(6,17,31,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1320px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .logo-img{width:44px;height:44px;flex-shrink:0;object-fit:contain;border-radius:10px;filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
+.logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
+.logo .lt span{font-size:8px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:3px}
+.nav-links{display:flex;gap:26px;flex:1;justify-content:center}
+.nav-links a{font-weight:500;font-size:14px;color:var(--t1);display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 16px;border-radius:8px;
+  border:1.5px solid var(--blue3);font-weight:600;font-size:14px;
+}
+.phone-btn svg{width:15px;height:15px;color:var(--blue)}
+
+/* HERO — padding-top/bottom only so .wrap's horizontal 28px isn't overridden */
+.hero{
+  position:relative;
+  padding-top:56px;padding-bottom:80px;
+  min-height:600px;
+}
+.hero-text{position:relative;z-index:2;max-width:580px}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px}
+.h1{font-weight:900;font-size:62px;line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+.emph{color:var(--blue);position:relative;display:inline-block}
+.emph svg.underline{position:absolute;left:-2%;right:-2%;bottom:-8px;width:104%;height:11px;display:block}
+.lead{color:var(--t2);font-size:16px;line-height:1.6;margin-bottom:24px;max-width:460px}
+.checks{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+.checks li{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--t1)}
+.check-i{
+  width:22px;height:22px;border-radius:50%;background:rgba(77,163,255,.2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.check-i svg{width:13px;height:13px;color:var(--blue);stroke-width:2.8}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Hero image — fixed 880px width, glued to container (not viewport), symmetric centered fade */
+.hero-img-wrap{
+  position:absolute;top:0;right:-40px;
+  width:880px;height:100%;
+  z-index:1;pointer-events:none;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),
+    linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:
+    linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),
+    linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
+  mask-composite:intersect;
+}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover}
+
+/* TRUST BAR */
+.trust{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:22px 26px;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:22px;
+  box-shadow:var(--shadow);margin-bottom:88px;
+}
+.trust-item{display:flex;gap:14px;align-items:flex-start}
+.trust-item svg{width:38px;height:38px;color:var(--blue);flex-shrink:0;stroke-width:1.5}
+.trust-item b{display:block;font-size:14px;font-weight:700;margin-bottom:4px;line-height:1.2}
+.trust-item p{font-size:12px;color:var(--t2);line-height:1.45}
+
+/* STORY */
+.story{display:grid;grid-template-columns:1fr 1.05fr .85fr;gap:36px;padding-bottom:96px;align-items:start}
+.story-img{border-radius:14px;overflow:hidden;height:540px}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-text{padding-top:4px}
+.h2{font-weight:800;font-size:32px;line-height:1.12;letter-spacing:-1px;margin-bottom:22px}
+.h2 .b{color:var(--blue);position:relative;display:inline-block}
+.h2 .b svg.underline{position:absolute;left:-1%;right:-1%;bottom:-6px;width:102%;height:9px;display:block}
+.story-text p{color:var(--t2);font-size:14.5px;line-height:1.65;margin-bottom:14px}
+.story-quote{color:var(--blue);font-size:15px;font-weight:500;margin-top:6px;line-height:1.55}
+.story-features{display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.feat{display:flex;gap:14px;align-items:flex-start}
+.feat-icon{width:30px;height:30px;flex-shrink:0;color:var(--blue);stroke-width:1.7}
+.feat b{display:block;font-size:15px;font-weight:700;margin-bottom:5px}
+.feat p{font-size:13px;color:var(--t2);line-height:1.55}
+
+/* SECTION HEAD */
+.section-head{text-align:center;margin-bottom:44px;border-top:1px solid var(--border);padding-top:48px}
+.section-head .eyebrow{margin-bottom:10px}
+.section-head .h2{font-size:30px;margin-bottom:0}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:88px}
+.svc{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+.svc-img{position:relative;aspect-ratio:1.5/1}
+.svc-img img{width:100%;height:100%;object-fit:cover}
+.svc-icon{
+  position:absolute;left:16px;bottom:-22px;
+  width:46px;height:46px;border-radius:50%;background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.svc-icon svg{width:22px;height:22px;color:#fff;stroke-width:2}
+.svc-body{padding:34px 22px 22px;flex:1;display:flex;flex-direction:column}
+.svc-body h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.svc-body p{font-size:13.5px;color:var(--t2);line-height:1.55;flex:1;margin-bottom:16px}
+.svc-learn{
+  color:var(--blue);font-weight:600;font-size:13px;
+  display:inline-flex;align-items:center;gap:6px;
+  background:none;border:none;cursor:pointer;padding:0;align-self:flex-start;
+}
+.svc-learn:hover{color:var(--blue3)}
+
+/* PROCESS */
+.process{padding-bottom:96px}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;align-items:start;position:relative}
+.step{display:flex;gap:18px;padding:0 16px;position:relative}
+.step .bi{
+  width:64px;height:64px;border-radius:50%;
+  border:1.5px solid var(--border);background:var(--c1);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;
+}
+.step .bi svg{width:30px;height:30px;color:var(--blue);stroke-width:1.5}
+.step .num{
+  position:absolute;top:-4px;left:-6px;
+  width:24px;height:24px;background:var(--blue);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;z-index:2;border:2px solid var(--bg);
+}
+.step-text{padding-top:8px}
+.step-text b{display:block;font-size:17px;font-weight:700;margin-bottom:6px}
+.step-text p{font-size:13.5px;color:var(--t2);line-height:1.55}
+.step+.step::before{
+  content:'';position:absolute;left:-12%;top:32px;width:24%;
+  border-top:2px dashed var(--border);
+}
+
+/* BOTTOM 3-COL */
+.bottom-3{display:grid;grid-template-columns:.9fr 1.15fr 1fr;gap:24px;padding-bottom:48px;align-items:start}
+.bot-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.bot-card .eyebrow{font-size:11px;margin-bottom:10px}
+.bot-card .h3{font-size:22px;font-weight:800;line-height:1.2;margin-bottom:14px;letter-spacing:-.5px}
+.bot-card p{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:10px}
+.script-y{font-family:Caveat,cursive;color:var(--yellow2);font-size:24px;font-weight:700;display:inline-block}
+.bot-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;gap:12px}
+.bot-head .h3{margin:0}
+.view-all{color:var(--blue);font-weight:600;font-size:12px;white-space:nowrap}
+.view-all:hover{color:var(--blue3)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ba-mini{position:relative;aspect-ratio:1/.85;border-radius:8px;overflow:hidden;background:#0A1B2E}
+.ba-mini img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.ba-lbl{position:absolute;top:6px;background:#fff;color:#000;font-size:8px;font-weight:800;padding:2px 6px;border-radius:3px;letter-spacing:.5px}
+.ba-lbl.l{left:6px}.ba-lbl.r{right:6px}
+.ba-mini .div{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:#fff;transform:translateX(-50%)}
+.ba-mini .div::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;width:18px;height:18px;border-radius:50%}
+.ba-mini .div::before{content:'⟷';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#000;font-size:10px;z-index:2;font-weight:700}
+.reviews-card .stars{color:var(--yellow);font-size:18px;margin-bottom:12px;letter-spacing:1.5px}
+.reviews-card .quote{font-size:13.5px;color:var(--t2);line-height:1.6;margin-bottom:10px}
+.reviews-card .name{font-size:13px;color:var(--t2)}
+.dots{display:flex;justify-content:center;gap:5px;margin-top:14px}
+.dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2)}
+.dots span.on{background:var(--blue)}
+
+/* OWENS CORNING VISUALIZER SECTION */
+.visualizer-section{padding-bottom:80px}
+.visualizer-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:18px;box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.visualizer-card #visualizer{
+  border-radius:10px;overflow:hidden;min-height:520px;
+}
+
+/* FINAL CTA */
+.final-cta{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:28px 32px;margin-bottom:32px;
+  display:grid;grid-template-columns:auto 1.4fr 1fr 1.1fr;gap:32px;
+  align-items:center;box-shadow:var(--shadow);
+}
+.final-cta .logo .logo-img{width:60px;height:60px;border-radius:12px}
+.fc-msg .h3{font-size:25px;font-weight:800;line-height:1.15;letter-spacing:-.5px}
+.fc-msg .h3 .b{color:var(--blue)}
+.fc-msg p{font-size:13px;color:var(--t2);line-height:1.5;margin-top:8px}
+.fc-msg .script-y{font-size:18px;margin-top:4px}
+.fc-phone{text-align:center}
+.fc-phone-num{display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:700;color:var(--t1)}
+.fc-phone-num svg{width:20px;height:20px;color:var(--blue)}
+.fc-phone small{display:block;font-size:12px;color:var(--t2);margin-top:4px}
+.fc-cta{display:flex;flex-direction:column;align-items:center;gap:10px}
+.fc-tag{font-family:Caveat,cursive;color:var(--yellow2);font-size:19px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.fc-tag svg{width:36px;height:14px;color:var(--yellow2)}
+
+/* FOOTER */
+footer{padding:20px 0 36px;border-top:1px solid var(--border)}
+.foot-row{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.foot-row .logo .logo-img{width:38px;height:38px;border-radius:9px}
+.foot-row .logo .lt b{font-size:14px}
+.foot-row .logo .lt span{font-size:7px}
+.foot-links{display:flex;gap:24px;justify-content:center}
+.foot-links a{font-size:13px;color:var(--t2)}
+.foot-links a:hover{color:var(--blue)}
+.social{display:flex;gap:10px;align-items:center}
+.social a{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:.2s}
+.social a:hover{color:var(--blue);border-color:var(--blue)}
+.social svg{width:14px;height:14px}
+.foot-tag{text-align:right;font-size:11px;color:var(--t3);margin-top:14px}
+
+/* RESPONSIVE */
+@media (max-width:1040px){
+  .nav-links{display:none}
+  .nav-inner{justify-content:space-between}
+}
+
+/* Hero stacks earlier (1100px) because the fixed 880px image needs room */
+@media (max-width:1100px){
+  .hero{min-height:auto;padding-top:32px;padding-bottom:48px}
+  .hero-text{max-width:none}
+  .hero-img-wrap{
+  position:relative;top:auto;right:auto;
+  width:100%;height:auto;aspect-ratio:3/2;margin-top:28px;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),
+    linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:
+    linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),
+    linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+  mask-composite:intersect;
+}
+}
+
+@media (max-width:880px){
+  .h1{font-size:44px}
+  .trust{grid-template-columns:1fr 1fr;gap:20px}
+  .story{grid-template-columns:1fr;gap:36px}
+  .story-img{height:320px}
+  .services{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .step+.step::before{display:none}
+  .bottom-3{grid-template-columns:1fr;gap:20px}
+  .final-cta{grid-template-columns:1fr;text-align:center;gap:20px}
+  .fc-msg{text-align:center}
+  .fc-cta{align-items:center}
+  .foot-row{grid-template-columns:1fr;text-align:center;gap:16px}
+  .foot-links{flex-wrap:wrap}
+  .foot-tag{text-align:center}
+}
+@media (max-width:560px){
+  .h1{font-size:34px}
+  .h2{font-size:24px}
+  .services{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr;gap:18px}
+  .checks{gap:14px}
+  .nav-cta .phone-btn{display:none}
+  .logo .lt b{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor"><path d="M5 8 L1 3 L9 3 Z"/></svg></a>
+      <a href="#story">Our Story</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:7342011000" class="phone-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (734) 201-1000
+      </a>
+      <button class="btn btn-p" onclick="document.getElementById('contact').scrollIntoView()">Free Inspection</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Metro-Detroit's Modern Roofing Company</p>
+    <h1 class="h1">Built for Michigan.<br>Backed by <span class="emph">integrity.<svg class="underline" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
+    <p class="lead">We build roofs the right way—with premium materials, expert craftsmanship, and clear communication from start to finish.</p>
+    <ul class="checks">
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>No pushy sales</li>
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>No shortcuts</li>
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Just quality work</li>
+    </ul>
+    <div class="hero-btns">
+      <button class="btn btn-p btn-lg" onclick="document.getElementById('contact').scrollIntoView()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Schedule a Free Inspection
+      </button>
+      <button class="btn btn-s btn-lg" onclick="document.getElementById('projects').scrollIntoView()">See Real Projects</button>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/image2.png" alt="Rooftop Heroes roofer at work">
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="wrap">
+<div class="trust">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Licensed & Insured</b><p>Your protection<br>comes first.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+    <div><b>Manufacturer Certified</b><p>Trained. Tested.<br>Trusted.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Workmanship Warranty</b><p>We stand behind<br>our work.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.5"/><path d="M22 21v-1a4 4 0 0 0-3-3.87"/></svg>
+    <div><b>Local & Family-Owned</b><p>Proudly serving<br>Metro-Detroit.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 L20 10"/><path d="M11 7 L17 13 L13 17 L7 11 Z"/><path d="M7 11 L4 20 L13 17"/></svg>
+    <div><b>Clean Job Sites</b><p>We leave it better<br>than we found it.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story" class="wrap story">
+  <div class="story-img"><img src="https://picsum.photos/seed/crew-van/800/700" alt="Crew with van"></div>
+  <div class="story-text">
+    <p class="eyebrow">Our Story</p>
+    <h2 class="h2">Not all heroes wear capes.<br><span class="b">Some wear tool belts.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+    <p>We built Rooftop Heroes to make roofing feel different. Less pressure. Better communication. More pride in the work.</p>
+    <p>We believe homeowners deserve honest guidance, full transparency, quality craftsmanship, and a crew that genuinely cares about the homes they work on.</p>
+    <p>Roofing should never feel rushed, confusing, or stressful. Ask us questions anytime. Visit our office. Get to know us. We want the process to feel calm, straightforward, and enjoyable from start to finish.</p>
+    <p class="story-quote">We take care of homeowners like family—<br>and the heroes on the roof the same way.</p>
+  </div>
+  <div class="story-features">
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      <div><b>No Pushy Sales</b><p>Honest recommendations and clear options. No pressure. Ever.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <div><b>Full Transparency</b><p>Ask us anything. We'll answer. Clear pricing. Clear communication. No confusion.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <div><b>A Calmer Roofing Experience</b><p>Clean job sites, respectful crews, and a process designed to feel stress-free.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div><b>We're Here When You Need Us</b><p>You don't need a roof today? That's okay. Whenever you're ready, we'll be here to help.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<div class="wrap">
+<div id="services" class="section-head">
+  <p class="eyebrow">Our Services</p>
+  <h2 class="h2">Everything your home needs. <span class="b">Done the right way.<svg class="underline" viewBox="0 0 240 9" preserveAspectRatio="none"><path d="M2 6 Q 60 1 120 4 T 238 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+</div>
+<div class="services">
+  <div class="svc">
+    <div class="svc-img">
+      <img src="https://picsum.photos/seed/new-roof/400/280" alt="">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+    </div>
+    <div class="svc-body">
+      <h3>New Roof Installation</h3>
+      <p>High-quality roofing systems installed with craftsmanship and attention to detail.</p>
+      <button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button>
+    </div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <img src="https://picsum.photos/seed/roof-replace/400/280" alt="">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.4 0 4.6.9 6.3 2.5"/><path d="M21 3v6h-6"/></svg></div>
+    </div>
+    <div class="svc-body">
+      <h3>Roof Replacement</h3>
+      <p>Complete tear-off and replacement using premium materials built for Michigan weather.</p>
+      <button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button>
+    </div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <img src="https://picsum.photos/seed/gutters/400/280" alt="">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s-6 8-6 12a6 6 0 0 0 12 0c0-4-6-12-6-12z"/></svg></div>
+    </div>
+    <div class="svc-body">
+      <h3>Gutters</h3>
+      <p>Seamless gutters, guards, fascia, soffit, and drainage solutions that protect your home.</p>
+      <button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button>
+    </div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <img src="https://picsum.photos/seed/insulation/400/280" alt="">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0 2 0 2 0"/><path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0 2 0 2 0"/></svg></div>
+    </div>
+    <div class="svc-body">
+      <h3>Insulation</h3>
+      <p>Improve comfort and energy efficiency with proper attic insulation and ventilation.</p>
+      <button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- OUR PROCESS -->
+<div class="wrap">
+<div class="section-head">
+  <p class="eyebrow">Our Process</p>
+  <h2 class="h2">A simple, transparent process from start to finish.</h2>
+</div>
+<div class="process">
+  <div class="steps">
+    <div class="step">
+      <div class="bi">
+        <span class="num">1</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/><rect x="9" y="1.5" width="6" height="3" rx="1"/></svg>
+      </div>
+      <div class="step-text"><b>Inspect</b><p>We inspect your roof, document everything clearly, and answer your questions honestly.</p></div>
+    </div>
+    <div class="step">
+      <div class="bi">
+        <span class="num">2</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9.5 14h4a1.5 1.5 0 0 1 0 3h-4M9.5 14v3"/></svg>
+      </div>
+      <div class="step-text"><b>Estimate</b><p>You'll receive a detailed estimate with clear options, materials, and timelines—without pressure.</p></div>
+    </div>
+    <div class="step">
+      <div class="bi">
+        <span class="num">3</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 14 2 2 4-4"/></svg>
+      </div>
+      <div class="step-text"><b>Install</b><p>Our crew gets the job done right, protects your property, and cleans up like we were never there.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- BOTTOM 3-COL -->
+<section id="projects" class="wrap">
+<div class="bottom-3">
+  <div class="bot-card">
+    <p class="eyebrow">Full Transparency. Always.</p>
+    <h3 class="h3">Ask us anything. We'll answer.</h3>
+    <p>This is a non-rushed process.<br>We want getting your roof to feel calm and enjoyable—not rushed or confusing.</p>
+    <p>Come into our office. Get to know us. Ask us anything. We'll give you honest answers, clear guidance, and straightforward recommendations.</p>
+    <p class="script-y" style="margin-top:8px">Built on honesty.</p>
+  </div>
+  <div class="bot-card">
+    <div class="bot-head">
+      <h3 class="h3">Real roofs. Real results.</h3>
+      <a class="view-all" href="#projects">View All Projects →</a>
+    </div>
+    <p class="eyebrow" style="margin-top:-6px;margin-bottom:14px">Recent Projects</p>
+    <div class="ba-grid">
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba1/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba2/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba3/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+    </div>
+  </div>
+  <div id="reviews" class="bot-card reviews-card">
+    <div class="bot-head">
+      <p class="eyebrow" style="margin:0">What Homeowners Are Saying</p>
+      <a class="view-all" href="#reviews">View All Reviews →</a>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p class="quote">"They were honest, on time, and our new roof looks amazing. The whole process was easy and stress-free."</p>
+    <p class="name">— Sarah M., Ann Arbor</p>
+    <div class="dots"><span></span><span></span><span class="on"></span><span></span></div>
+  </div>
+</div>
+</section>
+
+<!-- OWENS CORNING ROOF VISUALIZER -->
+<section id="visualize" class="wrap visualizer-section">
+  <div class="section-head">
+    <p class="eyebrow">Design Tool</p>
+    <h2 class="h2">Visualize your new roof. <span class="b">Try it on your home.<svg class="underline" viewBox="0 0 260 9" preserveAspectRatio="none"><path d="M2 6 Q 65 1 130 4 T 258 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+  </div>
+  <div class="visualizer-card">
+    <div id="visualizer" data-zip="48130"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="contact" class="wrap">
+<div class="final-cta">
+  <a href="#" class="logo">
+    <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+  </a>
+  <div class="fc-msg">
+    <h3 class="h3">Whenever you're ready,<br><span class="b">we're here to help.</span></h3>
+    <p>Call, text, or schedule a free inspection anytime.</p>
+    <span class="script-y">Fast, easy, and no pressure.</span>
+  </div>
+  <div class="fc-phone">
+    <a href="tel:7342011000" class="fc-phone-num">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (734) 201-1000
+    </a>
+    <small>Call or text anytime</small>
+  </div>
+  <div class="fc-cta">
+    <button class="btn btn-p btn-lg" onclick="document.getElementById('contact').scrollIntoView()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Schedule a Free Inspection
+    </button>
+    <span class="fc-tag">Fast, easy, and no pressure.
+      <svg viewBox="0 0 36 14" fill="none"><path d="M2 7 Q 15 2 28 7 L 24 4 M 28 7 L 24 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+    </span>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="about" class="wrap">
+<div class="foot-row">
+  <a href="#" class="logo">
+    <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+    <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+  </a>
+  <div class="foot-links">
+    <a href="#services">Services</a>
+    <a href="#story">Our Story</a>
+    <a href="#projects">Projects</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="social">
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+    <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v3.2h5.3c-.2 1.4-1.6 4.2-5.3 4.2-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.6 4 14.5 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.6-3.6 8.6-8.8 0-.6-.1-1-.1-1.4H12z"/></svg></a>
+  </div>
+</div>
+<p class="foot-tag">Proudly Metro-Detroit & surrounding areas</p>
+</footer>
+
+</body>
+</html>
