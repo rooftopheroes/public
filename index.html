@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rooftop Heroes — Built for Michigan. Backed by Integrity.</title>
+<title>Rooftop Heroes - Built for Michigan. Backed by Integrity.</title>
 <meta name="description" content="Rooftop Heroes is a Metro-Detroit roofing company specializing in residential and commercial roof replacement, storm damage restoration, and free inspections.">
 
 <!-- Favicon / Apple Touch Icon -->
@@ -18,7 +18,7 @@
 
 <!-- Third-party widgets -->
 <script src="https://app.roofle.com/roof-quote-pro-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
-<script src="https://apis.owenscorning.com/client/widget.js" async></script>
+<!--script src="https://apis.owenscorning.com/client/widget.js" async></script-->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +93,7 @@ ul{list-style:none}
   padding-top:56px;padding-bottom:80px;
   min-height:600px;
 }
-.hero-text{position:relative;z-index:2;max-width:580px}
+.hero-text{position:relative;z-index:2;max-width:680px}
 .eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px}
 .h1{font-weight:900;font-size:62px;line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
 .emph{color:var(--blue);position:relative;display:inline-block}
@@ -258,6 +258,20 @@ ul{list-style:none}
 }
 .visualizer-card #visualizer{
   border-radius:10px;overflow:hidden;min-height:520px;
+}
+
+.visualizer-body {
+  position: absolute;
+  left: -9999px;
+  width: 100%;
+  margin-top: 24px;
+  visibility: hidden;
+}
+
+.visualizer-body.open {
+  position: static;
+  left: auto;
+  visibility: visible;
 }
 
 /* ── FIX #1 & #2 & #3: FINAL CTA — unified form with all fields + consent ── */
@@ -599,26 +613,27 @@ footer .foot-bottom-left span:last-child {
 
 <!-- TRUST BAR -->
 <section class="wrap">
+<br><br>
 <div class="trust">
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-    <div><b>Licensed & Insured</b><p>Your protection<br>comes first.</p></div>
+    <div><b>Licensed & Insured</b><p>#262600515 <br>Your protection comes first </p></div>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
-    <div><b>Manufacturer Certified</b><p>Trained. Tested.<br>Trusted.</p></div>
+    <div><b>Manufacturer Certified</b><p>Trained. Tested. Trusted.</p></div>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-    <div><b>Workmanship Warranty</b><p>We stand behind<br>our work.</p></div>
+    <div><b>Workmanship Warranty</b><p>We stand behind our work.</p></div>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.5"/><path d="M22 21v-1a4 4 0 0 0-3-3.87"/></svg>
-    <div><b>Local & Family-Owned</b><p>Proudly serving<br>Southeast Michigan.</p></div>
+    <div><b>Local & Family-Owned</b><p>Proudly serving Southeast Michigan.</p></div>
   </div>
   <div class="trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 L20 10"/><path d="M11 7 L17 13 L13 17 L7 11 Z"/><path d="M7 11 L4 20 L13 17"/></svg>
-    <div><b>Clean Job Sites</b><p>We leave it better<br>than we found it.</p></div>
+    <div><b>Clean Job Sites</b><p>We leave it better than we found it.</p></div>
   </div>
 </div>
 </section>
@@ -1166,20 +1181,47 @@ footer .foot-bottom-left span:last-child {
 (function(){
   var btn = document.getElementById('viz-toggle');
   var body = document.getElementById('viz-body');
+  var widgetStarted = false;
 
-  if(!btn || !body) return;
+  if (!btn || !body) return;
+
+  function loadVisualizer() {
+    if (widgetStarted) return;
+    widgetStarted = true;
+
+    var s = document.createElement('script');
+    s.src = 'https://apis.owenscorning.com/client/widget.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }
+
+  // Start loading only after the normal page load is complete,
+  // so the browser does not show the page as still loading.
+  window.addEventListener('load', function(){
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadVisualizer, { timeout: 2500 });
+    } else {
+      setTimeout(loadVisualizer, 1500);
+    }
+  });
 
   btn.addEventListener('click', function(){
+    loadVisualizer();
+
     var isOpen = body.classList.contains('open');
-    if(isOpen){
+
+    if (isOpen) {
       body.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
+      btn.setAttribute('aria-expanded', 'false');
       btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg> Try It On Your Home';
     } else {
       body.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
+      btn.setAttribute('aria-expanded', 'true');
       btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> Close Visualizer';
-      setTimeout(function(){ body.scrollIntoView({behavior:'smooth', block:'start'}); }, 100);
+
+      setTimeout(function(){
+        body.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
   });
 })();
