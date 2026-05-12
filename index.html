@@ -77,7 +77,7 @@ ul{list-style:none}
 .logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
 .logo .lt span{font-size:8px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:3px}
 .nav-links{display:flex;gap:26px;flex:1;justify-content:center}
-.nav-links a{font-weight:500;font-size:14px;color:var(--t1);display:flex;align-items:center;gap:5px}
+.nav-links a{white-space: nowrap; font-weight:500;font-size:14px;color:var(--t1);display:flex;align-items:center;gap:5px}
 .nav-links a:hover{color:var(--blue)}
 .nav-cta{display:flex;align-items:center;gap:12px}
 .phone-btn{
@@ -360,6 +360,11 @@ ul{list-style:none}
 @media(max-width:880px){
   .where-card{grid-template-columns:1fr;gap:24px;padding:24px}
 }
+@media (max-width: 880px) {
+  .desktop-break {
+    display: none;
+  }
+}
 
 /* FOOTER */
 footer{padding:32px 0 28px}
@@ -561,7 +566,7 @@ footer .foot-bottom-left span:last-child {
   <div class="hero-text">
     <p class="eyebrow">Southeast Michigan's Modern Roofing Company</p>
 	<h1 class="h1">Built for Michigan.<br>Backed by <span class="emph">integrity.<svg class="underline" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
-	<p class="lead">Durable roofs, built to last. Installed by a crew you actually want on your roof — skilled, honest, and respectful from first knock to final cleanup.</p>
+	<p class="lead">Durable roofs, built to last. Installed by skilled craftsmen <br class="desktop-break">with clear communication from start to finish.</p>
     <ul class="checks">
       <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>No pushy sales</li>
       <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Built to last</li>
@@ -1137,7 +1142,7 @@ footer .foot-bottom-left span:last-child {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         SMS Communication Consent
       </div>
-      <p>By submitting a form on this website or contacting Rooftop Heroes LLC, you consent to receive SMS messages related to roofing estimates, appointment scheduling, project updates, and customer support. If you request an instant quote via our online quoting tool, that tool may also capture your contact information — please review the consent notice within the quoting tool before submitting.</p>
+      <p>By submitting a form on this website or contacting Rooftop Heroes LLC, you consent to receive SMS messages related to roofing estimates, appointment scheduling, project updates, and customer support. If you request an instant quote via our online quoting tool, that tool may also capture your contact information - please review the consent notice within the quoting tool before submitting.</p>
     </div>
     <div class="foot-sms-right">
       <div class="foot-sms-tags">
