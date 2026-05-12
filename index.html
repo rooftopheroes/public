@@ -71,6 +71,7 @@ ul{list-style:none}
   border-bottom:1px solid var(--border);
 }
 .nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1320px;margin:0 auto}
+.nav-inner .logo{flex:1}
 .logo{display:flex;align-items:center;gap:10px}
 .logo .logo-img{width:44px;height:44px;flex-shrink:0;object-fit:contain;border-radius:10px;filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
 .logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
@@ -234,6 +235,22 @@ ul{list-style:none}
 
 /* OWENS CORNING VISUALIZER SECTION */
 .visualizer-section{padding-bottom:80px}
+.visualizer-trigger{
+  display:flex;justify-content:center;margin-top:8px;
+}
+.visualizer-trigger .btn-viz{
+  font:600 15px Inter,sans-serif;
+  padding:14px 28px;border-radius:10px;
+  background:var(--blue);color:#fff;border:none;cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:.2s;box-shadow:0 4px 18px rgba(77,163,255,.25);
+}
+.visualizer-trigger .btn-viz:hover{background:var(--blue3);box-shadow:0 6px 24px rgba(77,163,255,.35)}
+.visualizer-trigger .btn-viz svg{width:18px;height:18px;flex-shrink:0}
+.visualizer-body{
+  display:none;margin-top:24px;
+}
+.visualizer-body.open{display:block}
 .visualizer-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:14px;padding:18px;box-shadow:var(--shadow);
@@ -345,19 +362,54 @@ ul{list-style:none}
 }
 
 /* FOOTER */
-footer{padding:20px 0 36px;border-top:1px solid var(--border)}
+footer{padding:32px 0 28px}
 .foot-row{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
 .foot-row .logo .logo-img{width:38px;height:38px;border-radius:9px}
 .foot-row .logo .lt b{font-size:14px}
 .foot-row .logo .lt span{font-size:7px}
-.foot-links{display:flex;gap:24px;justify-content:center}
+.foot-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
 .foot-links a{font-size:13px;color:var(--t2)}
 .foot-links a:hover{color:var(--blue)}
 .social{display:flex;gap:10px;align-items:center}
 .social a{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:.2s}
 .social a:hover{color:var(--blue);border-color:var(--blue)}
 .social svg{width:14px;height:14px}
-.foot-tag{text-align:right;font-size:11px;color:var(--t3);margin-top:14px}
+/* SMS disclosure inside footer */
+.foot-sms{
+  margin-top:20px;padding-top:20px;
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;
+}
+.foot-sms-left{}
+.foot-sms-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:700;color:var(--blue);
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;
+}
+.foot-sms-label svg{width:13px;height:13px;flex-shrink:0}
+.foot-sms-left p{font-size:11.5px;color:var(--t3);line-height:1.65}
+.foot-sms-right{display:flex;flex-direction:column;gap:6px}
+.foot-sms-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.foot-sms-tag{
+  font-size:11px;color:var(--t3);
+  background:rgba(77,163,255,.05);border:1px solid rgba(110,198,255,.1);
+  border-radius:5px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;
+}
+.foot-sms-tag svg{width:10px;height:10px;color:var(--blue);flex-shrink:0}
+.foot-sms-opt{font-size:11px;color:var(--t3);line-height:1.6}
+.foot-sms-opt strong{color:var(--t2)}
+.foot-sms-opt a{color:var(--blue);text-decoration:underline}
+/* bottom bar */
+.foot-bottom{
+  margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--border);
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;
+}
+.foot-bottom-left{font-size:11px;color:var(--t3);line-height:1.7;display:flex;flex-wrap:wrap;gap-x:18px;gap:4px 18px}
+.foot-tag{font-size:11px;color:var(--t3)}
+@media(max-width:880px){
+  .foot-sms{grid-template-columns:1fr;gap:16px}
+}
 
 /* RESPONSIVE */
 @media (max-width:1040px){
@@ -392,8 +444,10 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
   .final-cta{grid-template-columns:1fr;gap:20px}
   .fc-right{grid-template-columns:1fr;gap:20px}
   .foot-row{grid-template-columns:1fr;text-align:center;gap:16px}
-  .foot-links{flex-wrap:wrap}
+  .foot-links{flex-wrap:wrap;justify-content:center}
   .foot-tag{text-align:center}
+  .foot-bottom{flex-direction:column;align-items:center;text-align:center}
+  .foot-bottom-left{justify-content:center;text-align:center}
 }
 @media (max-width:640px){
   .contact-form .form-row{grid-template-columns:1fr}
@@ -406,6 +460,66 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
   .checks{gap:14px}
   .nav-cta .phone-btn{display:none}
   .logo .lt b{font-size:13px}
+}
+
+
+
+
+
+/* MOBILE FOOTER FIXES ONLY */
+@media (max-width: 880px) {
+
+  /* HIDE LOCATION + PROUDLY SERVING TEXT */
+  footer .foot-bottom-left > div,
+  footer .foot-bottom-left p,
+  footer .foot-bottom-left span:first-child {
+    display: none !important;
+  }
+
+  /* MOBILE LAYOUT */
+ footer .foot-bottom-left {
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+/* LICENSED & INSURED */
+footer .foot-bottom-left span:last-child {
+  position: absolute !important;
+  right: 0 !important;
+  top: 25px !important;
+  width: auto !important;
+  text-align: right !important;
+  margin: 0 !important;
+}
+
+  /* STACK FOOTER SECTIONS */
+  footer .foot-row {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  /* LOGO LEFT */
+  footer .foot-row .logo {
+    justify-content: flex-start !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* REMOVE DESKTOP LEFT SHIFT */
+  footer .foot-links {
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+
+  /* CENTER SOCIAL ICONS */
+  footer .social {
+    justify-content: center !important;
+  }
+
 }
 .dev-notice{margin:18px auto 0;padding:12px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(255,201,40,.08);color:var(--t2);font-size:13px;text-align:center}
 .dev-notice strong{color:var(--yellow2);font-weight:700;margin-right:4px}
@@ -446,8 +560,8 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
 <section class="hero wrap">
   <div class="hero-text">
     <p class="eyebrow">Southeast Michigan's Modern Roofing Company</p>
-    <h1 class="h1">Not all heroes wear capes. Some wear <span class="emph">tool belts.<svg class="underline" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
-    <p class="lead">Durable roofs, built to last. Installed by a crew you actually want on your roof — skilled, honest, and respectful from first knock to final cleanup.</p>
+	<h1 class="h1">Built for Michigan.<br>Backed by <span class="emph">integrity.<svg class="underline" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
+	<p class="lead">Durable roofs, built to last. Installed by a crew you actually want on your roof — skilled, honest, and respectful from first knock to final cleanup.</p>
     <ul class="checks">
       <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>No pushy sales</li>
       <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Built to last</li>
@@ -546,7 +660,7 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
   </div>
   <div class="story-text">
     <p class="eyebrow">Our Story</p>
-    <h2 class="h2">You deserve a roofer you<br><span class="emph"> actually want to trust.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+    <h2 class="h2">Not all heroes wear capes.<br><span class="b">Some wear tool belts.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
 	<p>We built Rooftop Heroes to make roofing feel different. Less pressure. Better communication. More pride in the work.</p>
     <p>We believe homeowners deserve honest guidance, full transparency, quality craftsmanship, and a crew that genuinely cares about the homes they work on.</p>
     <p>Roofing should never feel rushed, confusing, or stressful. Ask us questions anytime. Visit our office. Get to know us. We want the process to feel calm, straightforward, and enjoyable from start to finish.</p>
@@ -784,10 +898,18 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
 <section id="visualize" class="wrap visualizer-section">
   <div class="section-head">
     <p class="eyebrow">Design Tool</p>
-    <h2 class="h2">Visualize your new roof. <span class="b">Try it on your home.<svg class="underline" viewBox="0 0 260 9" preserveAspectRatio="none"><path d="M2 6 Q 65 1 130 4 T 258 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+    <h2 class="h2">Visualize your new roof.</h2>
   </div>
-  <div class="visualizer-card">
-    <div id="visualizer" data-zip="48130"></div>
+  <div class="visualizer-trigger">
+    <button class="btn-viz" id="viz-toggle" aria-expanded="false" aria-controls="viz-body">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg>
+      Try It On Your Home
+    </button>
+  </div>
+  <div class="visualizer-body" id="viz-body">
+    <div class="visualizer-card">
+      <div id="visualizer" data-zip="48130"></div>
+    </div>
   </div>
 </section>
 
@@ -856,6 +978,10 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
      FINAL CTA — FIX #1 #2 #3: Real unified form with consent
      ══════════════════════════════════════════════════════════ -->
 <section id="contact" class="wrap">
+<div class="section-head">
+  <p class="eyebrow">Get Started</p>
+  <h2 class="h2">Whenever you're ready, <span class="b">we're here to help.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+</div>
 <div class="final-cta">
   <!-- Logo -->
   <a href="#" class="logo" style="align-self:flex-start;padding-top:4px;">
@@ -865,7 +991,6 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
   <div class="fc-right">
     <!-- Left: message + phone -->
     <div class="fc-msg">
-      <h3 class="h3">Whenever you're ready,<br><span class="b">we're here to help.</span></h3>
       <!-- FIX #4: removed "call or text anytime" — replaced with call-only phrasing for the direct phone number -->
       <p>Fill out the form to schedule your free inspection, or give us a call directly.</p>
       <span class="script-y">Fast, easy, and no pressure.</span>
@@ -896,12 +1021,12 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
           </div>
           <div class="form-group">
             <label for="f-address">Property Address *</label>
-            <input type="text" id="f-address" name="address" placeholder="123 Main St, Ann Arbor" required>
+            <input type="text" id="f-address" name="address" placeholder="123 Main St, Ann Arbor" required autocomplete="street-address">
           </div>
         </div>
         <div class="form-group">
           <label for="f-service">Service Needed</label>
-          <select id="f-service" name="service">
+          <select id="f-service" name="service" autocomplete="off">
             <option value="">Select a service…</option>
             <option>Roof Inspection</option>
             <option>Roof Replacement</option>
@@ -914,7 +1039,7 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
         </div>
         <div class="form-group">
           <label for="f-notes">Additional Notes</label>
-          <textarea id="f-notes" name="notes" placeholder="Any details about your roof or project…"></textarea>
+          <textarea id="f-notes" name="notes" placeholder="Any details about your roof or project…" autocomplete="off"></textarea>
         </div>
 
         <!-- SMS Consent — unified with submit button -->
@@ -945,56 +1070,114 @@ footer{padding:20px 0 36px;border-top:1px solid var(--border)}
 </div>
 </section>
 
-<!-- SMS DISCLOSURE -->
-<section class="wrap" style="margin-top:40px;margin-bottom:40px;">
-  <div style="background:rgba(13,31,51,.85);border:1px solid rgba(110,198,255,.18);padding:20px;border-radius:14px;">
-    <h3 style="font-size:18px;margin-bottom:10px;color:#F4F8FF;">SMS Communication Consent</h3>
-    <p style="font-size:13px;color:#B9C7D8;line-height:1.6;">
-      By submitting a form on this website or contacting Rooftop Heroes LLC, you consent to receive SMS messages from Rooftop Heroes LLC related to roofing estimates, appointment scheduling, project updates, and customer support.
-      <br><br>
-      <!-- FIX #6: Added Roofle note -->
-      If you request an instant quote via our online quoting tool, that tool may also capture your contact information. Please review the consent notice presented within the quoting tool before submitting.
-      <br><br>
-      Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. View our <a href="/privacy.html" style="color:#4DA3FF;text-decoration:underline">Privacy Policy</a> and <a href="/terms.html" style="color:#4DA3FF;text-decoration:underline">SMS Terms</a>.
-    </p>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer id="about" class="wrap">
-<div class="foot-row">
-  <a href="#" class="logo">
-    <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
-    <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
-  </a>
-  <div class="foot-links">
-    <a href="#services">Services</a>
-    <a href="#story">Our Story</a>
-    <a href="#projects">Projects</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/terms.html">SMS Terms</a>
+
+
+
+<div
+  class="foot-bottom-left"
+  style="display:flex; align-items:center; width:100%; gap:20px; margin-top: -15px;"
+>
+  <!-- Left -->
+  <span style="white-space:nowrap;">
+    Proudly serving Southeast Michigan
+  </span>
+
+  <!-- Center -->
+  <div style="flex:1; text-align:center;">
+    <a
+      href="https://maps.app.goo.gl/SYQMvCSL7KwqEw2U7"
+      target="_blank"
+      style="text-decoration:none; color:inherit; white-space:nowrap;"
+    >
+      3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103
+    </a>
   </div>
-  <div class="social">
-    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
-    <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v3.2h5.3c-.2 1.4-1.6 4.2-5.3 4.2-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.6 4 14.5 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.6-3.6 8.6-8.8 0-.6-.1-1-.1-1.4H12z"/></svg></a>
-  </div>
+
+  <!-- Right -->
+  <span style="white-space:nowrap; margin-left:auto;">
+    Licensed &amp; Insured · #262600515
+  </span>
 </div>
-<div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px">
-  <div style="font-size:11px;color:var(--t3);line-height:1.7">
-    <span style="margin-right:18px">3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103</span>
-    <span style="margin-right:18px">MI Builder License: #262600515 &nbsp;|&nbsp; Qualifying Officer: #242400627</span>
-    <span>Licensed &amp; Insured &nbsp;·&nbsp; Exp. 05/31/2028</span>
+
+<div style="height:15px;"></div>
+  <!-- Top row: logo · nav links · social -->
+  <div class="foot-row">
+
+    <a href="#" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+	
+    <div class="foot-links" style="margin-left:-80px;">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <!--a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">SMS Terms</a-->
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v3.2h5.3c-.2 1.4-1.6 4.2-5.3 4.2-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.6 4 14.5 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.6-3.6 8.6-8.8 0-.6-.1-1-.1-1.4H12z"/></svg></a>
+    </div>
   </div>
-  <p class="foot-tag" style="margin-top:0">Proudly serving Southeast Michigan</p>
-</div>
+  
+
+
+
+  <!-- SMS disclosure row -->
+  <div class="foot-sms">
+    <div class="foot-sms-left">
+      <div class="foot-sms-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        SMS Communication Consent
+      </div>
+      <p>By submitting a form on this website or contacting Rooftop Heroes LLC, you consent to receive SMS messages related to roofing estimates, appointment scheduling, project updates, and customer support. If you request an instant quote via our online quoting tool, that tool may also capture your contact information — please review the consent notice within the quoting tool before submitting.</p>
+    </div>
+    <div class="foot-sms-right">
+      <div class="foot-sms-tags">
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Consent required before first message</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No marketing or promotional messages</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Msg &amp; data rates may apply · Frequency varies</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Consent is not a condition of purchase</span>
+      </div>
+      <p class="foot-sms-opt">Reply <strong>STOP</strong> to opt out &nbsp;·&nbsp; Reply <strong>HELP</strong> for help &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">SMS Terms</a></p>
+    </div>
+  </div>
+
+<br>
+
+
+
 </footer>
 
 <script>
-// Form submission handler — validates consent checkbox is checked before allowing submit
+// Visualizer toggle — widget loads with page, panel stays hidden until user clicks
+(function(){
+  var btn = document.getElementById('viz-toggle');
+  var body = document.getElementById('viz-body');
+
+  if(!btn || !body) return;
+
+  btn.addEventListener('click', function(){
+    var isOpen = body.classList.contains('open');
+    if(isOpen){
+      body.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg> Try It On Your Home';
+    } else {
+      body.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> Close Visualizer';
+      setTimeout(function(){ body.scrollIntoView({behavior:'smooth', block:'start'}); }, 100);
+    }
+  });
+})();
 (function(){
   var form = document.getElementById('lead-form');
   var btn  = document.getElementById('submit-btn');
