@@ -482,7 +482,29 @@ footer{padding:32px 0 28px}
 }
 
 
+.hero-overlay1 {
+  position: absolute;
+  right: 6%;
+  bottom: 6%;
+  z-index: 2;
+  width: clamp(80px, 17%, 150px);
+  pointer-events: none;
+  transform: none;
+}
 
+.hero-overlay1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+	@media (max-width: 880px) {
+  .hero-overlay1 {
+    right: 5%;
+    bottom: 5%;
+    width: clamp(64px, 20%, 120px);
+  }
+	}
 
 
 /* MOBILE FOOTER FIXES ONLY */
@@ -607,11 +629,18 @@ footer .foot-bottom-left span:last-child {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/image.png" alt="Rooftop Heroes roofer at work">
+  <img
+    src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/image.png"
+    alt="Rooftop Heroes roofer at work"
+  >
+
+  <div class="hero-overlay1">
+    <img
+      src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/overlay1.png"
+      alt="Rooftop Heroes overlay"
+    >
   </div>
-  <div style="position: absolute; top: 280px; right: 80px; z-index: 9999; width: 150px;">
-    <img src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/overlay1.png" alt="Rooftop Heroes roofer at work">
-  </div>
+</div>
 </section>
 
 <!-- TRUST BAR -->
