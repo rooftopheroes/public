@@ -108,12 +108,27 @@ a:hover{color:var(--blue3)}
 .highlight-box p{margin:0;font-size:13.5px;color:var(--t2);line-height:1.65}
 .highlight-box strong{color:var(--blue)}
 
+/* warning box */
+.warning-box{
+  background:rgba(255,201,40,.06);
+  border:1px solid rgba(255,201,40,.25);
+  border-left:3px solid var(--yellow);
+  border-radius:10px;padding:16px 20px;margin:14px 0 18px;
+}
+.warning-box p{margin:0;font-size:13.5px;color:var(--t2);line-height:1.65}
+.warning-box strong{color:var(--yellow2)}
+
 /* keyword pills */
 .keyword{
   display:inline-block;background:rgba(77,163,255,.15);
   color:var(--blue);font-weight:700;font-size:13px;
   padding:2px 10px;border-radius:5px;margin:0 2px;
   font-family:monospace;letter-spacing:.5px;
+}
+
+/* carrier list */
+.carrier-list{
+  font-size:13px;color:var(--t3);line-height:1.8;
 }
 
 /* contact card */
@@ -149,7 +164,7 @@ footer a{color:var(--blue);font-size:12px}
   <div class="page-header">
     <p class="eyebrow">Legal</p>
     <h1>SMS Terms of Service</h1>
-    <p class="meta">Rooftop Heroes LLC &nbsp;·&nbsp; Last updated: May 1, 2025 &nbsp;·&nbsp; Effective: May 1, 2025</p>
+    <p class="meta">Rooftop Heroes LLC &nbsp;·&nbsp; Last updated: May 18, 2025 &nbsp;·&nbsp; Effective: May 18, 2025</p>
   </div>
 
   <!-- QUICK REFERENCE -->
@@ -170,12 +185,12 @@ footer a{color:var(--blue);font-size:12px}
   <div class="doc-body">
 
     <section>
-      <p>These SMS Terms of Service ("SMS Terms") govern the text messaging program operated by Rooftop Heroes LLC ("Rooftop Heroes," "we," "us," or "our"). By providing your mobile phone number and checking the consent box on our website contact form, or by otherwise expressly agreeing to receive SMS communications from us, you agree to these SMS Terms.</p>
+      <p>These SMS Terms of Service ("SMS Terms") govern the text messaging program operated by Rooftop Heroes LLC ("Rooftop Heroes," "we," "us," or "our"), located at 3027 Miller Rd, Suite 11, Ann Arbor, MI 48103. By providing your mobile phone number and checking the SMS consent checkbox on our website contact form at rooftopheroes.com, you agree to these SMS Terms.</p>
     </section>
 
     <section>
       <h2>1. Program Description</h2>
-      <p>Rooftop Heroes LLC operates a 1:1 transactional SMS program exclusively for service-related communications tied to a confirmed roofing service request that you have submitted. Messages are sent only after you have provided express written or recorded consent.</p>
+      <p>Rooftop Heroes LLC sends SMS messages to customers and prospective customers who have explicitly opted in via a consent checkbox on our website at rooftopheroes.com. Messages are sent by Rooftop Heroes LLC to opted-in contacts regarding roofing estimates, appointment scheduling, project updates, and customer support. Message frequency varies. Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help.</p>
 
       <h3>Message types we send</h3>
       <ul>
@@ -190,97 +205,106 @@ footer a{color:var(--blue);font-size:12px}
       <h3>Message types we never send</h3>
       <ul>
         <li>Promotional, marketing, or advertising messages</li>
-        <li>Messages used for lead generation or re-engagement</li>
+        <li>Messages used for lead generation or re-engagement campaigns</li>
         <li>Messages to individuals who have not provided prior express written consent</li>
         <li>Messages to individuals who have opted out</li>
       </ul>
     </section>
 
     <section>
-      <h2>2. Consent</h2>
-      <p>You must provide <strong>express written consent</strong> before we send you any SMS message. Consent is obtained via:</p>
-      <ul>
-        <li>Checking the SMS consent checkbox on our website contact form at the time of submitting a service request</li>
-        <li>Verbal recorded consent provided during an inbound phone call to our office</li>
-      </ul>
-      <div class="highlight-box">
+      <h2>2. Consent and Sign-Up Confirmation</h2>
+      <p>You must provide <strong>express written consent</strong> before we send you any SMS message. Consent is obtained exclusively by checking the SMS consent checkbox on our website contact form at rooftopheroes.com at the time of submitting a service request. The checkbox is unchecked by default.</p>
+
+      <div class="warning-box">
         <p><strong>Consent is not a condition of purchase.</strong> You may receive our roofing services without agreeing to receive SMS messages.</p>
       </div>
-      <p>We record the date, time, source, and consent language at the time consent is provided. These records are retained for compliance purposes.</p>
+
+      <p>When you opt in to the service, we may send you a message to confirm your signup. Message and data rates may apply. Message frequency varies. Text <span class="keyword">HELP</span> for help. Text <span class="keyword">STOP</span> to cancel.</p>
+
+      <p>We record the date, time, source URL, and consent language version at the time consent is provided. These records are retained for a minimum of 4 years for compliance purposes.</p>
     </section>
 
     <section>
-      <h2>3. How to Opt Out</h2>
-      <p>You may opt out of SMS communications at any time by replying <span class="keyword">STOP</span> to any message you receive from us.</p>
-      <p>After you send <span class="keyword">STOP</span>, you will receive one final confirmation message and no further SMS messages will be sent to your number unless you re-consent.</p>
-      <p>You may also opt out by contacting us directly at <a href="tel:7342011000">(734) 201-1000</a> or <a href="mailto:info@rooftopheroes.com">info@rooftopheroes.com</a>.</p>
+      <h2>3. How to Stop Messages</h2>
+      <p>You can cancel this service at any time. Just text <span class="keyword">STOP</span> to the number from which you received our message. After you send the message <span class="keyword">STOP</span> to us, we will reply to confirm that you have been unsubscribed. After this, you will no longer receive messages from us. If you want to join again, just sign up as you did the first time through our website contact form, and we will start sending you messages again.</p>
     </section>
 
     <section>
       <h2>4. How to Get Help</h2>
-      <p>Reply <span class="keyword">HELP</span> to any SMS message to receive assistance, or contact us directly:</p>
+      <p>If at any time you forget what keywords are supported, just text <span class="keyword">HELP</span> to the number from which you received our message. After you send the message <span class="keyword">HELP</span> to us, we will respond with instructions on how to use our service and how to unsubscribe.</p>
+      <p>You may also contact us directly:</p>
       <div class="contact-card">
         <p><strong>Rooftop Heroes LLC</strong></p>
+        <p>3027 Miller Rd, Suite 11, Ann Arbor, MI 48103</p>
         <p>Phone: <a href="tel:7342011000">(734) 201-1000</a></p>
         <p>Email: <a href="mailto:info@rooftopheroes.com">info@rooftopheroes.com</a></p>
       </div>
     </section>
 
     <section>
-      <h2>5. Message Frequency</h2>
-      <p>Message frequency varies depending on the status and needs of your active roofing project. Most customers receive between 2 and 8 messages per project (from initial confirmation through project completion). You will not receive messages after your project is closed unless a new service request is submitted.</p>
+      <h2>5. Message Frequency and Rates</h2>
+      <p>Message frequency varies depending on the status and needs of your active roofing project. Most customers receive between 2 and 8 messages per project, from initial confirmation through project completion. You will not receive messages after your project is closed unless a new service request is submitted.</p>
+      <p>Message and data rates may apply. Rooftop Heroes LLC does not charge you to receive our messages, but your mobile carrier's standard rates apply. Contact your carrier for details about your plan.</p>
     </section>
 
     <section>
-      <h2>6. Message and Data Rates</h2>
-      <p>Standard message and data rates from your mobile carrier may apply to SMS messages you send and receive. Rooftop Heroes LLC does not charge you to receive our messages, but your carrier's standard rates apply. Contact your carrier for details about your plan.</p>
-    </section>
-
-    <section>
-      <h2>7. Supported Carriers</h2>
-      <p>Our SMS program is supported by all major U.S. wireless carriers including AT&amp;T, T-Mobile, Verizon, and others. Delivery is not guaranteed by all carriers. Carrier support may change without notice.</p>
-      <p>Carriers are not liable for delayed or undelivered messages.</p>
-    </section>
-
-    <section>
-      <h2>8. Sample Messages</h2>
-      <p>Below are examples of the types of messages you may receive:</p>
+      <h2>6. Sample Messages</h2>
+      <p>Below are representative examples of the types of messages you may receive:</p>
 
       <p><strong>Service Request Confirmation</strong></p>
       <div class="sample-msg">
-        <strong>Rooftop Heroes LLC:</strong> We received your roofing service request for [Address]. A team member will contact you to schedule your inspection and next steps for this specific job. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help.
+        <strong>Rooftop Heroes LLC:</strong> We received your roofing service request for [Address]. A team member will contact you shortly to schedule your free inspection. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
       </div>
 
       <p><strong>Appointment Confirmation</strong></p>
       <div class="sample-msg">
-        <strong>Rooftop Heroes LLC:</strong> Your roof inspection is scheduled for [Date/Time] at [Address]. Reply STOP to opt out or HELP for help. Msg &amp; data rates may apply.
+        <strong>Rooftop Heroes LLC:</strong> Hi [First Name], your free roof inspection is confirmed for [Date] at [Time] at [Address]. Questions? Call or text (734) 201-1000. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+      </div>
+
+      <p><strong>Appointment Reminder</strong></p>
+      <div class="sample-msg">
+        <strong>Rooftop Heroes LLC:</strong> Hi [First Name], this is a reminder about your upcoming roof inspection on [Date] at [Time]. Call or text (734) 201-1000 if you need to reschedule. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+      </div>
+
+      <p><strong>Estimate Ready</strong></p>
+      <div class="sample-msg">
+        <strong>Rooftop Heroes LLC:</strong> Hi [First Name], your roofing estimate for [Address] is ready. We'll send it to your email and are happy to walk you through it. Call or text (734) 201-1000. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
       </div>
     </section>
 
     <section>
-      <h2>9. Data Use and Sharing</h2>
-      <p>Your mobile phone number and SMS consent record are used solely to deliver the service communications described in these SMS Terms. We do not sell, rent, or share your mobile number or SMS consent data with third parties for marketing purposes.</p>
-      <p>Mobile information collected through our SMS program will not be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors for purposes directly supporting your active service request is permitted. All other use-case categories exclude text messaging originator opt-in data and consent; this information will not be shared.</p>
+      <h2>7. Participating Carriers</h2>
+      <p>Our SMS program is supported by all major U.S. wireless carriers. Participating carriers include:</p>
+      <p class="carrier-list">AT&amp;T, Verizon Wireless, Sprint, T-Mobile, U.S. Cellular, Boost Mobile, MetroPCS, Virgin Mobile, Alaska Communications Systems (ACS), Appalachian Wireless (EKN), Bluegrass Cellular, Cellular One of East Central IL (ECIT), Cellular One of Northeast Pennsylvania, Cricket, Coral Wireless (Mobi PCS), COX, Cross, Element Mobile (Flat Wireless), Epic Touch (Elkhart Telephone), GCI, Golden State, Hawkeye (Chat Mobility), Hawkeye (NW Missouri), Illinois Valley Cellular, Inland Cellular, iWireless (Iowa Wireless), Keystone Wireless (Immix Wireless/PC Man), Mosaic (Consolidated or CTC Telecom), Nex-Tech Wireless, NTelos, Panhandle Communications, Pioneer, Plateau (Texas RSA 3 Ltd), Revol, RINA, Simmetry (TMP Corporation), Thumb Cellular, Union Wireless, United Wireless, Viaero Wireless, and West Central (WCC or 5 Star Wireless).</p>
+      <p><strong>Carriers are not liable for delayed or undelivered messages.</strong> Delivery is not guaranteed on all carriers. Carrier support may change without notice.</p>
     </section>
 
     <section>
-      <h2>10. Relationship to Privacy Policy</h2>
-      <p>These SMS Terms are supplemental to our <a href="/privacy.html">Privacy Policy</a>, which governs the collection, use, and protection of all personal information we hold about you. Please review our Privacy Policy for full details.</p>
+      <h2>8. Data Use and Privacy</h2>
+      <p>Your mobile phone number and SMS consent data are used solely to deliver the service communications described in these SMS Terms. Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors for purposes directly supporting your active service request is permitted under confidentiality obligations. Text messaging originator opt-in data and consent are exempt from third-party sharing. All other use-case categories exclude text messaging originator opt-in data and consent; this information will not be shared.</p>
+      <p>If you have any questions regarding privacy, please read our <a href="/privacy.html">Privacy Policy</a>.</p>
     </section>
 
     <section>
-      <h2>11. Changes to These Terms</h2>
+      <h2>9. Relationship to Privacy Policy</h2>
+      <p>These SMS Terms are supplemental to and do not replace our <a href="/privacy.html">Privacy Policy</a>, which governs the collection, use, and protection of all personal information we hold about you. Please review our Privacy Policy for full details on how your information is handled.</p>
+    </section>
+
+    <section>
+      <h2>10. Changes to These Terms</h2>
       <p>We may update these SMS Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of our SMS program after changes are posted constitutes your acceptance of the updated terms.</p>
     </section>
 
     <section>
-      <h2>12. Contact Us</h2>
+      <h2>11. Contact Us</h2>
       <p>Questions about these SMS Terms? Contact us:</p>
       <div class="contact-card">
         <p><strong>Rooftop Heroes LLC</strong></p>
-        <p>Metro-Detroit, Michigan</p>
+        <p>3027 Miller Rd, Suite 11</p>
+        <p>Ann Arbor, MI 48103</p>
         <p>Phone: <a href="tel:7342011000">(734) 201-1000</a></p>
         <p>Email: <a href="mailto:info@rooftopheroes.com">info@rooftopheroes.com</a></p>
+        <p>Website: <a href="https://rooftopheroes.com">rooftopheroes.com</a></p>
       </div>
     </section>
 
@@ -288,7 +312,7 @@ footer a{color:var(--blue);font-size:12px}
 </div>
 
 <footer>
-  <p style="margin-bottom:8px">© 2025 Rooftop Heroes LLC. All rights reserved.</p>
+  <p style="margin-bottom:8px">&copy; 2025 Rooftop Heroes LLC &nbsp;·&nbsp; 3027 Miller Rd Suite 11, Ann Arbor, MI 48103 &nbsp;·&nbsp; All rights reserved.</p>
   <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">SMS Terms</a></p>
 </footer>
 
