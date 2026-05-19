@@ -101,10 +101,19 @@ ul{list-style:none}
 .trust-pill.yellow{border-color:rgba(255,201,40,.25);background:rgba(255,201,40,.06)}
 
 /* ── WIDGET FRAME ── */
-.widget-section{padding:0 0 64px;margin-top:-1px;}
+.widget-section{padding:0 28px 64px;margin-top:-1px;}
+.widget-wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:28px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
 .widget-shell{
   overflow:hidden;
-  border-radius:18px;
+  border-radius:12px;
 }
 #roof-quote-pro-embedded{
   display:block;
@@ -305,9 +314,11 @@ footer{
 </section>
 
 <!-- QUOTE LAUNCH -->
-<section class="widget-section wrap">
-  <div class="widget-shell">
-    <div id="roof-quote-pro-embedded"></div>
+<section class="widget-section">
+  <div class="widget-wrap">
+    <div class="widget-shell">
+      <div id="roof-quote-pro-embedded"></div>
+    </div>
   </div>
 </section>
 <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
