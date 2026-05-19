@@ -14,8 +14,7 @@
 <meta property="og:description" content="Metro-Detroit roofing - get an instant estimate in seconds.">
 <meta property="og:image" content="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.jpg">
 
-<!-- Roofle Embedded Widget -->
-<script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY"></script>
+<!-- Roofle Embedded Widget - script placed in body per Roofle docs -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,22 +105,11 @@ ul{list-style:none}
   background:var(--card);
   border:1px solid var(--border);
   border-radius:18px;
-  padding:10px;
+  overflow:hidden;
   box-shadow:var(--shadow), 0 0 60px rgba(77,163,255,.06);
-  overflow:hidden;
-  position:relative;
 }
-.widget-shell::before{
-  content:'';
-  position:absolute;inset:0;border-radius:18px;
-  background:linear-gradient(135deg,rgba(77,163,255,.04),transparent 60%);
-  pointer-events:none;
-}
-/* The Roofle widget target */
-#roofle-quote-widget{
-  min-height:480px;
-  border-radius:10px;
-  overflow:hidden;
+#roof-quote-pro-embedded{
+  min-height:500px;
 }
 
 /* ── DIVIDER ── */
@@ -318,12 +306,13 @@ footer{
   </div>
 </section>
 
-<!-- WIDGET -->
+<!-- QUOTE LAUNCH -->
 <section class="widget-section wrap">
   <div class="widget-shell">
-    <roof-quote-pro id="6VD02-sC9VtQT_bSwTMPY"></roof-quote-pro>
+    <div id="roof-quote-pro-embedded"></div>
   </div>
 </section>
+<script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
 
 <!-- DIVIDER -->
 <div class="wrap"><div class="divider"></div></div>
