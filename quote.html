@@ -102,18 +102,16 @@ ul{list-style:none}
 
 /* ── WIDGET FRAME ── */
 .widget-section{padding:0 28px 64px;margin-top:-1px;}
-.widget-wrap{
-  max-width:900px;
-  margin:0 auto;
-  padding:28px;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:22px;
-  box-shadow:var(--shadow);
-}
 .widget-shell{
+  position:relative;
+  width:900px;
+  max-width:100%;
+  margin:0 auto;
   overflow:hidden;
-  border-radius:12px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  background:var(--card);
 }
 #roof-quote-pro-embedded{
   display:block;
@@ -315,10 +313,8 @@ footer{
 
 <!-- QUOTE LAUNCH -->
 <section class="widget-section">
-  <div class="widget-wrap">
-    <div class="widget-shell">
-      <div id="roof-quote-pro-embedded"></div>
-    </div>
+  <div class="widget-shell">
+    <div id="roof-quote-pro-embedded"></div>
   </div>
 </section>
 <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
