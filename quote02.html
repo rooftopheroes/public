@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get an Instant Quote — Rooftop Heroes</title>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06111F;
+  --t1:#F4F8FF;--t2:#B9C7D8;--t3:#9FB2C7;
+  --blue:#4DA3FF;--blue3:#6EC6FF;
+  --border:rgba(110,198,255,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font:16px/1.6 Inter,sans-serif;
+  background:var(--bg);color:var(--t1);
+  min-height:100vh;display:flex;flex-direction:column;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{
+  background:rgba(6,17,31,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1320px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{width:44px;height:44px;flex-shrink:0;object-fit:contain;border-radius:10px;
+  filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
+.logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
+.logo .lt span{font-size:8px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:3px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.nav-link{font-size:13px;font-weight:500;color:var(--t2);padding:7px 12px;border-radius:7px;transition:.15s;border:1px solid transparent}
+.nav-link:hover{color:var(--t1);border-color:var(--border);background:rgba(77,163,255,.06)}
+.nav-link.primary{background:var(--blue);color:#fff;border-color:transparent;font-weight:600}
+.nav-link.primary:hover{background:var(--blue3)}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 14px;border-radius:8px;
+  border:1.5px solid var(--blue3);font-weight:600;font-size:13px;color:var(--t1);
+}
+.phone-btn svg{width:14px;height:14px;color:var(--blue)}
+
+/* MAIN */
+main{flex:1;display:flex;justify-content:center;padding:48px 28px 64px}
+
+/*
+  WIDGET CONTAINMENT STRATEGY — stacked fixes:
+
+  1. #clip-box  — fixed 700px wide, overflow:hidden clips anything wider,
+                  isolates the widget from the rest of the page layout.
+  2. #scale-box — transform:scale() shrinks the widget's rendered output
+                  to fit inside clip-box. Works even on full-vw iframes
+                  because transform applies AFTER layout.
+                  transform-origin:top left keeps it anchored correctly.
+  3. JS below   — measures clip-box width vs actual rendered widget width
+                  and sets the exact scale factor dynamically so it's
+                  correct on every screen size.
+  4. #clip-box height is set by JS to match the scaled content height,
+                  so the page doesn't have a giant gap.
+*/
+#clip-box{
+  width:700px;
+  max-width:100%;
+  overflow:hidden;
+  position:relative;
+  border-radius:14px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+#scale-box{
+  transform-origin:top left;
+  /* scale set by JS once widget renders */
+}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:24px 28px;text-align:center;font-size:12px;color:var(--t3)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+    <div class="nav-right">
+      <a href="tel:7342011000" class="phone-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.35 2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+        (734) 201-1000
+      </a>
+      <a href="index.html" class="nav-link primary">← Main Site</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div id="clip-box">
+    <div id="scale-box">
+      <div id="roof-quote-pro-embedded"></div>
+    </div>
+  </div>
+</main>
+
+<script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
+
+<script>
+(function(){
+  var clipBox   = document.getElementById('clip-box');
+  var scaleBox  = document.getElementById('scale-box');
+  var embedDiv  = document.getElementById('roof-quote-pro-embedded');
+
+  function applyScale(){
+    // Reset scale so we can measure true rendered width
+    scaleBox.style.transform = 'scale(1)';
+    scaleBox.style.width = '';
+
+    var naturalW = embedDiv.scrollWidth || scaleBox.scrollWidth;
+    var targetW  = clipBox.clientWidth;
+
+    if(naturalW <= 0 || targetW <= 0) return;
+
+    var scale = targetW / naturalW;
+    if(scale >= 1) return; // widget is already narrower than clip-box, nothing to do
+
+    scaleBox.style.transform = 'scale(' + scale + ')';
+    scaleBox.style.width = naturalW + 'px'; // prevent layout bleed
+    // Shrink clip-box height to match scaled content so there's no gap
+    var naturalH = scaleBox.scrollHeight;
+    clipBox.style.height = (naturalH * scale) + 'px';
+  }
+
+  // Run once after widget likely loaded, then keep watching for content changes
+  var attempts = 0;
+  var interval = setInterval(function(){
+    attempts++;
+    applyScale();
+    if(attempts > 40) clearInterval(interval); // stop after ~20s
+  }, 500);
+
+  // Also re-apply on resize
+  window.addEventListener('resize', applyScale);
+})();
+</script>
+
+<footer>
+  Proudly serving Southeast Michigan &nbsp;·&nbsp; 3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103 &nbsp;·&nbsp; Licensed &amp; Insured #262600515
+</footer>
+
+</body>
+</html>
