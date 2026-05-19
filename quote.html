@@ -102,12 +102,31 @@ ul{list-style:none}
 
 /* ── WIDGET FRAME ── */
 .widget-section{padding:0 0 64px;margin-top:-1px;}
-.widget-shell{
-  overflow:hidden;
+.widget-col{
+  max-width:780px;
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:18px;
+  padding:36px 40px 40px;
+  box-shadow:var(--shadow),0 0 48px rgba(77,163,255,.07);
+  position:relative;overflow:hidden;
 }
+.widget-col::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(77,163,255,.07),transparent 70%);
+}
+.widget-col-label{
+  text-align:center;margin-bottom:20px;position:relative;
+}
+.widget-col-label .eyebrow{margin-bottom:6px}
+.widget-col-label p{font-size:13px;color:var(--t2)}
 #roof-quote-pro-embedded{
   display:block;
+  position:relative;
+}
+@media(max-width:860px){
+  .widget-col{padding:24px 20px 28px;}
 }
 
 /* ── DIVIDER ── */
@@ -252,7 +271,7 @@ footer{
 /* ── Page fade-in ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .hero-strip{animation:fadeUp .55s ease both}
-.widget-shell{animation:fadeUp .65s .1s ease both}
+.widget-col{animation:fadeUp .65s .1s ease both}
 .explore{animation:fadeUp .6s .18s ease both}
 </style>
 </head>
@@ -304,9 +323,13 @@ footer{
   </div>
 </section>
 
-<!-- QUOTE LAUNCH -->
+<!-- QUOTE WIDGET -->
 <section class="widget-section wrap">
-  <div class="widget-shell">
+  <div class="widget-col">
+    <div class="widget-col-label">
+      <span class="eyebrow">Instant Estimate · No Obligation</span>
+      <p>Enter your address below — takes about 60 seconds.</p>
+    </div>
     <div id="roof-quote-pro-embedded"></div>
   </div>
 </section>
