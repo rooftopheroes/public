@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rooftop Heroes - Built for Michigan. Backed by Integrity.</title>
+<meta name="description" content="Rooftop Heroes is a Metro-Detroit roofing company specializing in residential and commercial roof replacement, storm damage restoration, and free inspections.">
+
+<!-- Favicon / Apple Touch Icon -->
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+
+<!-- Open Graph / Facebook / LinkedIn / iMessage / Slack -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rooftop Heroes | Roofing & Storm Restoration">
+<meta property="og:description" content="Metro-Detroit roofing - residential, commercial, and storm restoration. Free inspections and written estimates.">
+<meta property="og:image" content="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.jpg">
+
+<!-- Third-party widgets -->
+<!-- Calendly widget CSS -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script src="https://app.roofle.com/roof-quote-pro-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
+
+<!-- Calendly popup widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06111F;--c1:#0B1F33;--c2:#102A43;--c3:#132F4C;
+  --t1:#F4F8FF;--t2:#B9C7D8;--t3:#9FB2C7;
+  --blue:#4DA3FF;--blue3:#6EC6FF;--blueS:#5AB7FF;
+  --yellow:#FFC928;--yellow2:#FFD34D;
+  --border:rgba(110,198,255,.18);
+  --card:rgba(13,31,51,.85);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font:16px/1.6 Inter,Manrope,sans-serif;
+  background:var(--bg);color:var(--t1);overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 20%,rgba(77,163,255,.08),transparent 70%),
+    radial-gradient(ellipse 70% 60% at 85% 80%,rgba(31,122,224,.05),transparent 70%);
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+
+/* BUTTONS */
+.btn{
+  font:600 14px Inter,sans-serif;padding:11px 22px;border-radius:8px;
+  border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;
+  transition:.2s;white-space:nowrap;
+}
+.btn-p{background:var(--blue);color:#fff}
+.btn-p:hover{background:var(--blue3)}
+.btn-s{background:transparent;color:#fff;border:1.5px solid var(--blue3)}
+.btn-s:hover{background:rgba(110,198,255,.08)}
+.btn-y{background:var(--yellow);color:#06111F;border:none}
+.btn-y:hover{background:var(--yellow2)}
+.btn-lg{padding:14px 26px;font-size:15px}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(6,17,31,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1320px;margin:0 auto}
+.nav-inner .logo{flex:1}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .logo-img{width:44px;height:44px;flex-shrink:0;object-fit:contain;border-radius:10px;filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
+.logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
+.logo .lt span{font-size:8px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:3px}
+.nav-links{display:flex;gap:26px;flex:1;justify-content:center}
+.nav-links a{white-space: nowrap; font-weight:500;font-size:14px;color:var(--t1);display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 16px;border-radius:8px;
+  border:1.5px solid var(--blue3);font-weight:600;font-size:14px;
+}
+.phone-btn svg{width:15px;height:15px;color:var(--blue)}
+
+/* HERO */
+.hero{
+  position:relative;
+  padding-top:56px;padding-bottom:80px;
+  min-height:600px;
+}
+.hero-text{position:relative;z-index:2;max-width:680px}
+.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px}
+.h1{font-weight:900;font-size:62px;line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+.emph{color:var(--blue);position:relative;display:inline-block}
+.emph svg.underline{position:absolute;left:-2%;right:-2%;bottom:-8px;width:104%;height:11px;display:block}
+.lead{color:var(--t2);font-size:16px;line-height:1.6;margin-bottom:24px;max-width:460px}
+.checks{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+.checks li{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--t1)}
+.check-i{
+  width:22px;height:22px;border-radius:50%;background:rgba(77,163,255,.2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.check-i svg{width:13px;height:13px;color:var(--blue);stroke-width:2.8}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Hero image */
+.hero-img-wrap{
+  position:absolute;top:0;right:-40px;
+  width:880px;height:100%;
+  z-index:1;pointer-events:none;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),
+    linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-image:
+    linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),
+    linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
+  mask-composite:intersect;
+}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover}
+
+/* TRUST BAR */
+.trust{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:22px 26px;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:22px;
+  box-shadow:var(--shadow);margin-bottom:88px;
+}
+.trust-item{display:flex;gap:14px;align-items:flex-start}
+.trust-item svg{width:38px;height:38px;color:var(--blue);flex-shrink:0;stroke-width:1.5}
+.trust-item b{display:block;font-size:14px;font-weight:700;margin-bottom:4px;line-height:1.2}
+.trust-item p{font-size:12px;color:var(--t2);line-height:1.45}
+
+/* STORY */
+.story{display:grid;grid-template-columns:1fr 1.05fr .85fr;gap:36px;padding-bottom:96px;align-items:start}
+.story-img{border-radius:14px;overflow:hidden;height:540px}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-text{padding-top:4px}
+.h2{font-weight:800;font-size:32px;line-height:1.12;letter-spacing:-1px;margin-bottom:22px}
+.h2 .b{color:var(--blue);position:relative;display:inline-block}
+.h2 .b svg.underline{position:absolute;left:-1%;right:-1%;bottom:-6px;width:102%;height:9px;display:block}
+.story-text p{color:var(--t2);font-size:14.5px;line-height:1.65;margin-bottom:14px}
+.story-quote{color:var(--blue);font-size:15px;font-weight:500;margin-top:6px;line-height:1.55}
+.story-features{display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.feat{display:flex;gap:14px;align-items:flex-start}
+.feat-icon{width:30px;height:30px;flex-shrink:0;color:var(--blue);stroke-width:1.7}
+.feat b{display:block;font-size:15px;font-weight:700;margin-bottom:5px}
+.feat p{font-size:13px;color:var(--t2);line-height:1.55}
+
+/* SECTION HEAD */
+.section-head{text-align:center;margin-bottom:44px;border-top:1px solid var(--border);padding-top:48px}
+.section-head .eyebrow{margin-bottom:10px}
+.section-head .h2{font-size:30px;margin-bottom:0}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:88px}
+.svc{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+.svc-img{position:relative;aspect-ratio:1.5/1}
+.svc-img img{width:100%;height:100%;object-fit:cover}
+.svc-icon{
+  position:absolute;left:16px;bottom:-22px;
+  width:46px;height:46px;border-radius:50%;background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.svc-icon svg{width:22px;height:22px;color:#fff;stroke-width:2}
+.svc-body{padding:34px 22px 22px;flex:1;display:flex;flex-direction:column}
+.svc-body h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.svc-body p{font-size:13.5px;color:var(--t2);line-height:1.55;flex:1;margin-bottom:16px}
+.svc-learn{
+  color:var(--blue);font-weight:600;font-size:13px;
+  display:inline-flex;align-items:center;gap:6px;
+  background:none;border:none;cursor:pointer;padding:0;align-self:flex-start;
+}
+.svc-learn:hover{color:var(--blue3)}
+
+/* PROCESS */
+.process{padding-bottom:96px}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;align-items:start;position:relative}
+.step{display:flex;gap:18px;padding:0 16px;position:relative}
+.step .bi{
+  width:64px;height:64px;border-radius:50%;
+  border:1.5px solid var(--border);background:var(--c1);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;
+}
+.step .bi svg{width:30px;height:30px;color:var(--blue);stroke-width:1.5}
+.step .num{
+  position:absolute;top:-4px;left:-6px;
+  width:24px;height:24px;background:var(--blue);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;z-index:2;border:2px solid var(--bg);
+}
+.step-text{padding-top:8px}
+.step-text b{display:block;font-size:17px;font-weight:700;margin-bottom:6px}
+.step-text p{font-size:13.5px;color:var(--t2);line-height:1.55}
+.step+.step::before{
+  content:'';position:absolute;left:-12%;top:32px;width:24%;
+  border-top:2px dashed var(--border);
+}
+
+/* BOTTOM 3-COL */
+.bottom-3{display:grid;grid-template-columns:.9fr 1.15fr 1fr;gap:24px;padding-bottom:48px;align-items:start}
+.bot-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.bot-card .eyebrow{font-size:11px;margin-bottom:10px}
+.bot-card .h3{font-size:22px;font-weight:800;line-height:1.2;margin-bottom:14px;letter-spacing:-.5px}
+.bot-card p{font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:10px}
+.script-y{font-family:Caveat,cursive;color:var(--yellow2);font-size:24px;font-weight:700;display:inline-block}
+.bot-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;gap:12px}
+.bot-head .h3{margin:0}
+.view-all{color:var(--blue);font-weight:600;font-size:12px;white-space:nowrap}
+.view-all:hover{color:var(--blue3)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ba-mini{position:relative;aspect-ratio:1/.85;border-radius:8px;overflow:hidden;background:#0A1B2E}
+.ba-mini img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.ba-lbl{position:absolute;top:6px;background:#fff;color:#000;font-size:8px;font-weight:800;padding:2px 6px;border-radius:3px;letter-spacing:.5px}
+.ba-lbl.l{left:6px}.ba-lbl.r{right:6px}
+.ba-mini .div{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:#fff;transform:translateX(-50%)}
+.ba-mini .div::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;width:18px;height:18px;border-radius:50%}
+.ba-mini .div::before{content:'⟷';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#000;font-size:10px;z-index:2;font-weight:700}
+.reviews-card .stars{color:var(--yellow);font-size:18px;margin-bottom:12px;letter-spacing:1.5px}
+.reviews-card .quote{font-size:13.5px;color:var(--t2);line-height:1.6;margin-bottom:10px}
+.reviews-card .name{font-size:13px;color:var(--t2)}
+.dots{display:flex;justify-content:center;gap:5px;margin-top:14px}
+.dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2)}
+.dots span.on{background:var(--blue)}
+
+/* OWENS CORNING VISUALIZER SECTION */
+.visualizer-section{padding-bottom:80px}
+.visualizer-trigger{
+  display:flex;justify-content:center;margin-top:8px;
+}
+.visualizer-trigger .btn-viz{
+  font:600 15px Inter,sans-serif;
+  padding:14px 28px;border-radius:10px;
+  background:var(--blue);color:#fff;border:none;cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:.2s;box-shadow:0 4px 18px rgba(77,163,255,.25);
+}
+.visualizer-trigger .btn-viz:hover{background:var(--blue3);box-shadow:0 6px 24px rgba(77,163,255,.35)}
+.visualizer-trigger .btn-viz svg{width:18px;height:18px;flex-shrink:0}
+.visualizer-body{
+  display:none;margin-top:24px;
+}
+.visualizer-body.open{display:block}
+.visualizer-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:18px;box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.visualizer-card #visualizer{
+  border-radius:10px;overflow:hidden;min-height:520px;
+}
+
+.visualizer-body {
+  position: absolute;
+  left: -9999px;
+  width: 100%;
+  margin-top: 24px;
+  visibility: hidden;
+}
+
+.visualizer-body.open {
+  position: static;
+  left: auto;
+  visibility: visible;
+}
+
+/* FINAL CTA */
+.final-cta{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:28px 32px;margin-bottom:32px;
+  display:grid;grid-template-columns:auto 1fr;gap:32px;
+  align-items:start;box-shadow:var(--shadow);
+}
+.final-cta .logo .logo-img{width:60px;height:60px;border-radius:12px}
+.fc-right{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.fc-msg .h3{font-size:25px;font-weight:800;line-height:1.15;letter-spacing:-.5px}
+.fc-msg .h3 .b{color:var(--blue)}
+.fc-msg p{font-size:13px;color:var(--t2);line-height:1.5;margin-top:8px}
+.fc-msg .script-y{font-size:18px;margin-top:4px;display:block}
+.fc-msg .phone-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:20px;font-weight:700;color:var(--t1);margin-top:14px;
+}
+.fc-msg .phone-link svg{width:18px;height:18px;color:var(--blue)}
+.fc-msg .phone-note{font-size:11px;color:var(--t3);margin-top:4px;display:block}
+
+/* Contact Form */
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-form .form-group{display:flex;flex-direction:column;gap:5px}
+.contact-form label{font-size:12px;font-weight:600;color:var(--t2);letter-spacing:.4px}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  border-radius:8px;padding:10px 13px;
+  color:var(--t1);font:14px/1.4 Inter,sans-serif;
+  outline:none;transition:.2s;width:100%;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{border-color:var(--blue);background:rgba(77,163,255,.06)}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{color:var(--t3)}
+.contact-form select option{background:#0B1F33;color:var(--t1)}
+.contact-form textarea{resize:vertical;min-height:72px}
+
+.sms-consent-block{
+  background:rgba(77,163,255,.05);
+  border:1px solid rgba(77,163,255,.2);
+  border-radius:8px;padding:12px 14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.sms-consent-label{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:12px;color:var(--t2);line-height:1.55;cursor:pointer;
+}
+.sms-consent-label input[type="checkbox"]{
+  width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:var(--blue);cursor:pointer;
+}
+.sms-consent-label a{color:var(--blue);text-decoration:underline}
+.consent-meta{font-size:11px;color:var(--t3);line-height:1.5}
+.contact-form .submit-btn{
+  background:var(--blue);color:#fff;border:none;border-radius:8px;
+  padding:13px 20px;font:600 15px Inter,sans-serif;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:.2s;width:100%;
+}
+.contact-form .submit-btn:hover{background:var(--blue3)}
+.contact-form .submit-btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* ── SUCCESS SUMMARY (new) ── */
+.form-success{
+  display:none;
+  background:rgba(77,163,255,.06);
+  border:1px solid rgba(77,163,255,.25);
+  border-radius:12px;
+  padding:28px 24px;
+}
+.form-success .success-icon{font-size:36px;margin-bottom:12px;display:block;text-align:center}
+.form-success .success-title{
+  color:var(--blue);font-size:18px;font-weight:800;
+  text-align:center;display:block;margin-bottom:6px;letter-spacing:-.3px;
+}
+.form-success .success-sub{
+  font-size:13px;color:var(--t2);text-align:center;
+  line-height:1.6;margin-bottom:20px;
+}
+.success-summary{
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px 16px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.ss-row{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:13px;color:var(--t2);line-height:1.4;
+}
+.ss-row svg{width:14px;height:14px;color:var(--blue);flex-shrink:0;margin-top:1px}
+.ss-row strong{color:var(--t1);font-weight:600}
+.success-note{
+  font-size:11px;color:var(--t3);text-align:center;
+  margin-top:14px;line-height:1.6;
+}
+
+/* WHERE WE WORK */
+.where-section{padding-bottom:80px}
+.where-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:36px 40px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+}
+.where-left h2{font-size:28px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:10px}
+.where-left h2 span{color:var(--blue)}
+.where-left p{font-size:14px;color:var(--t2);line-height:1.6;margin-bottom:0}
+.where-right{display:flex;flex-direction:column;gap:18px}
+.where-group{}
+.where-group .wg-label{
+  font-size:10px;font-weight:700;color:var(--blue);letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px;
+}
+.where-group .wg-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.where-tags{display:flex;flex-wrap:wrap;gap:7px}
+.where-tag{
+  font-size:12.5px;font-weight:500;color:var(--t2);
+  background:rgba(77,163,255,.07);border:1px solid rgba(110,198,255,.15);
+  border-radius:6px;padding:4px 10px;transition:.15s;
+}
+.where-tag.home{color:var(--blue);border-color:rgba(77,163,255,.3);background:rgba(77,163,255,.12);font-weight:600}
+@media(max-width:880px){
+  .where-card{grid-template-columns:1fr;gap:24px;padding:24px}
+}
+@media (max-width: 880px) {
+  .desktop-break {
+    display: none;
+  }
+}
+
+/* FOOTER */
+footer{padding:32px 0 28px}
+.foot-row{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.foot-row .logo .logo-img{width:38px;height:38px;border-radius:9px}
+.foot-row .logo .lt b{font-size:14px}
+.foot-row .logo .lt span{font-size:7px}
+.foot-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+.foot-links a{font-size:13px;color:var(--t2)}
+.foot-links a:hover{color:var(--blue)}
+.social{display:flex;gap:10px;align-items:center}
+.social a{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:.2s}
+.social a:hover{color:var(--blue);border-color:var(--blue)}
+.social svg{width:14px;height:14px}
+.foot-sms{
+  margin-top:20px;padding-top:20px;
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;
+}
+.foot-sms-left{}
+.foot-sms-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:700;color:var(--blue);
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;
+}
+.foot-sms-label svg{width:13px;height:13px;flex-shrink:0}
+.foot-sms-left p{font-size:11.5px;color:var(--t3);line-height:1.65}
+.foot-sms-right{display:flex;flex-direction:column;gap:6px}
+.foot-sms-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.foot-sms-tag{
+  font-size:11px;color:var(--t3);
+  background:rgba(77,163,255,.05);border:1px solid rgba(110,198,255,.1);
+  border-radius:5px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;
+}
+.foot-sms-tag svg{width:10px;height:10px;color:var(--blue);flex-shrink:0}
+.foot-sms-opt{font-size:11px;color:var(--t3);line-height:1.6}
+.foot-sms-opt strong{color:var(--t2)}
+.foot-sms-opt a{color:var(--blue);text-decoration:underline}
+.foot-bottom{
+  margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--border);
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;
+}
+.foot-bottom-left{font-size:11px;color:var(--t3);line-height:1.7;display:flex;flex-wrap:wrap;gap-x:18px;gap:4px 18px}
+.foot-tag{font-size:11px;color:var(--t3)}
+@media(max-width:880px){
+  .foot-sms{grid-template-columns:1fr;gap:16px}
+}
+
+/* RESPONSIVE */
+@media (max-width:1040px){
+  .nav-links{display:none}
+  .nav-inner{justify-content:space-between}
+}
+@media (max-width:1100px){
+  .hero{min-height:auto;padding-top:32px;padding-bottom:48px}
+  .hero-text{max-width:none}
+  .hero-img-wrap{
+    position:relative;top:auto;right:auto;
+    width:100%;height:auto;aspect-ratio:3/2;margin-top:28px;
+    -webkit-mask-image:
+      linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),
+      linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+    -webkit-mask-composite:source-in;
+    mask-image:
+      linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),
+      linear-gradient(to bottom,transparent,#000 8%,#000 92%,transparent);
+    mask-composite:intersect;
+  }
+}
+@media (max-width:880px){
+  .h1{font-size:44px}
+  .trust{grid-template-columns:1fr 1fr;gap:20px}
+  .story{grid-template-columns:1fr;gap:36px}
+  .story-img{height:320px}
+  .services{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .step+.step::before{display:none}
+  .bottom-3{grid-template-columns:1fr;gap:20px}
+  .final-cta{grid-template-columns:1fr;gap:20px}
+  .fc-right{grid-template-columns:1fr;gap:20px}
+  .foot-row{grid-template-columns:1fr;text-align:center;gap:16px}
+  .foot-links{flex-wrap:wrap;justify-content:center}
+  .foot-tag{text-align:center}
+  .foot-bottom{flex-direction:column;align-items:center;text-align:center}
+  .foot-bottom-left{justify-content:center;text-align:center}
+}
+@media (max-width:640px){
+  .contact-form .form-row{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .h1{font-size:34px}
+  .h2{font-size:24px}
+  .services{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr;gap:18px}
+  .checks{gap:14px}
+  .nav-cta .phone-btn{display:none}
+  .logo .lt b{font-size:13px}
+}
+
+.hero-overlay1 {
+  position: absolute;
+  right: 15%;
+  bottom: 20%;
+  z-index: 2;
+  width: clamp(80px, 17%, 150px);
+  pointer-events: none;
+  transform: none;
+}
+.hero-overlay1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 880px) {
+  .hero-overlay1 {
+    right: 14%;
+    bottom: 19%;
+    width: clamp(64px, 20%, 120px);
+  }
+}
+
+/* MOBILE FOOTER FIXES ONLY */
+@media (max-width: 880px) {
+  footer .foot-bottom-left > div,
+  footer .foot-bottom-left p,
+  footer .foot-bottom-left span:first-child {
+    display: none !important;
+  }
+  footer .foot-bottom-left {
+    position: relative !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  footer .foot-bottom-left span:last-child {
+    position: absolute !important;
+    right: 0 !important;
+    top: 15px !important;
+    width: auto !important;
+    text-align: right !important;
+    margin: 0 !important;
+  }
+  footer .foot-row {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+  footer .foot-row .logo {
+    justify-content: flex-start !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+  footer .foot-links {
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+  footer .social {
+    justify-content: center !important;
+  }
+}
+.dev-notice{margin:18px auto 0;padding:12px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(255,201,40,.08);color:var(--t2);font-size:13px;text-align:center}
+.dev-notice strong{color:var(--yellow2);font-weight:700;margin-right:4px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor"><path d="M5 8 L1 3 L9 3 Z"/></svg></a>
+      <a href="#story">Our Story</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:7342011000" class="phone-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (734) 201-1000
+      </a>
+      <button class="btn btn-p" onclick="document.getElementById('contact').scrollIntoView()">Free Inspection</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">Southeast Michigan's Modern Roofing Company</p>
+	<h1 class="h1">Built for Michigan.<br>Backed by <span class="emph">integrity.<svg class="underline" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
+	<p class="lead">Durable roofs, built to last. Installed by skilled craftsmen <br class="desktop-break">with clear communication from start to finish.</p>
+    <ul class="checks">
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Thorough inspections</li>
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Honest pricing</li>
+      <li><span class="check-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Zero pressure</li>
+    </ul>
+    <div class="hero-btns" style="display:inline-flex;flex-wrap:wrap;gap:12px;max-width:560px;">
+      <button class="btn btn-p btn-lg" onclick="document.getElementById('contact').scrollIntoView()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Schedule a Free Inspection
+      </button>
+      <button class="btn btn-y btn-lg" onclick="var btn=document.querySelector('.roofle-widget-button, [class*=roofle], [id*=roofle]');if(btn){btn.click();}else if(window.RoofQuotePro){window.RoofQuotePro.open();}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Get an Instant Quote
+      </button>
+      <button class="btn btn-s btn-lg" style="justify-content:center;" onclick="document.getElementById('projects').scrollIntoView()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        See Real Projects
+      </button>
+    </div>
+    <div style="margin-top:18px;display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(110,198,255,.2);border-radius:20px;background:rgba(77,163,255,.06)">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue);flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span style="font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--t2)">Proudly Serving Southeast Michigan</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/image.png" alt="Rooftop Heroes roofer at work">
+    <div class="hero-overlay1">
+      <img src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/overlay1.png" alt="Rooftop Heroes overlay">
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="wrap">
+<br><br>
+<div class="trust">
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Licensed & Insured</b><p>MI Builder: #262600515 <br>Your protection comes first </p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+    <div><b>Manufacturer Certified</b><p>Certified with Owens Corning, CertainTeed & GAF</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Workmanship Warranty</b><p>Owens Corning Preferred Protection Warranty*.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.5"/><path d="M22 21v-1a4 4 0 0 0-3-3.87"/></svg>
+    <div><b>Local & Family-Owned</b><p>Proudly serving Southeast Michigan.</p></div>
+  </div>
+  <div class="trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 L20 10"/><path d="M11 7 L17 13 L13 17 L7 11 Z"/><path d="M7 11 L4 20 L13 17"/></svg>
+    <div><b>Clean Job Sites</b><p>We leave it better than we found it.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story" class="wrap story">
+<div class="story-img" style="overflow:hidden; border-radius:14px; height:540px;">
+  <img
+    src="https://raw.githubusercontent.com/rooftopheroes/public/refs/heads/main/heroes1-crop4-v2.jpg"
+    alt="The Rooftop Heroes team"
+    style="width:100%;height:100%;object-fit:cover;object-position:49.5% 0%;transform:scale(1.0);transform-origin:center center;display:block;"
+  >
+</div>
+  <div class="story-text">
+    <p class="eyebrow">Our Story</p>
+    <h2 class="h2">Not all heroes wear capes.<br><span class="b">Some wear tool belts.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+	<p>We built Rooftop Heroes to make roofing feel different. Less pressure. Better communication. More pride in the work.</p>
+    <p>We believe homeowners deserve honest guidance, full transparency, quality craftsmanship, and a crew that genuinely cares about the homes they work on.</p>
+    <p>Roofing should never feel rushed, confusing, or stressful. Ask us questions anytime. Visit our office. Get to know us. We want the process to feel calm, straightforward, and enjoyable from start to finish.</p>
+    <p class="story-quote">We take care of homeowners like family-<br>and the heroes on the roof the same way.</p>
+  </div>
+  <div class="story-features">
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      <div><b>No Pushy Sales</b><p>Honest recommendations and clear options. No pressure. Ever.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <div><b>Full Transparency</b><p>Ask us anything. We'll answer. Clear pricing. Clear communication. No confusion.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      <div><b>A Calmer Roofing Experience</b><p>Clean job sites, respectful crews, and a process designed to feel stress-free.</p></div>
+    </div>
+    <div class="feat">
+      <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div><b>We're Here When You Need Us</b><p>You don't need a roof today? That's okay. Whenever you're ready, we'll be here to help.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<div class="wrap">
+<div id="services" class="section-head">
+  <p class="eyebrow">Our Services</p>
+  <h2 class="h2">Everything your home needs. <span class="b">Done the right way.<svg class="underline" viewBox="0 0 240 9" preserveAspectRatio="none"><path d="M2 6 Q 60 1 120 4 T 238 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+</div>
+<div class="services">
+  <div class="svc">
+    <div class="svc-img">
+      <svg width="100%" height="100%" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs><linearGradient id="svc1a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#061928"/><stop offset="100%" stop-color="#0D3558"/></linearGradient><linearGradient id="svc1b" x1="0%" y1="0%" x2="60%" y2="100%"><stop offset="0%" stop-color="#4DA3FF" stop-opacity=".18"/><stop offset="100%" stop-color="#4DA3FF" stop-opacity="0"/></linearGradient></defs>
+        <rect width="400" height="280" fill="url(#svc1a)"/><rect width="400" height="280" fill="url(#svc1b)"/>
+        <polygon points="200,40 340,130 320,130 320,230 80,230 80,130 60,130" fill="rgba(77,163,255,.1)" stroke="#4DA3FF" stroke-width="1.5" opacity=".5"/>
+        <g stroke="#6EC6FF" stroke-width=".7" opacity=".25"><line x1="80" y1="160" x2="320" y2="160"/><line x1="80" y1="185" x2="320" y2="185"/><line x1="80" y1="210" x2="320" y2="210"/><line x1="110" y1="160" x2="110" y2="230"/><line x1="150" y1="160" x2="150" y2="230"/><line x1="200" y1="160" x2="200" y2="230"/><line x1="250" y1="160" x2="250" y2="230"/><line x1="290" y1="160" x2="290" y2="230"/></g>
+        <circle cx="200" cy="40" r="5" fill="#FFC928" opacity=".8"/><circle cx="200" cy="40" r="14" fill="#FFC928" opacity=".1"/>
+        <text x="200" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#4DA3FF" letter-spacing="1.5" opacity=".7">NEW INSTALLATION</text>
+      </svg>
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+    </div>
+    <div class="svc-body"><h3>New Roof Installation</h3><p>High-quality roofing systems installed with craftsmanship and attention to detail.</p><button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button></div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <svg width="100%" height="100%" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs><linearGradient id="svc2a" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#081C2E"/><stop offset="100%" stop-color="#0A2E4E"/></linearGradient><linearGradient id="svc2b" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#6EC6FF" stop-opacity=".15"/><stop offset="100%" stop-color="#4DA3FF" stop-opacity="0"/></linearGradient></defs>
+        <rect width="400" height="280" fill="url(#svc2a)"/><rect width="400" height="280" fill="url(#svc2b)"/>
+        <circle cx="200" cy="130" r="80" fill="none" stroke="#4DA3FF" stroke-width="1.2" opacity=".3" stroke-dasharray="6 4"/><circle cx="200" cy="130" r="55" fill="rgba(77,163,255,.07)" stroke="#4DA3FF" stroke-width="1" opacity=".4"/>
+        <path d="M160,100 A50,50 0 1,1 240,100" fill="none" stroke="#4DA3FF" stroke-width="2" stroke-linecap="round" opacity=".5"/><polygon points="240,100 252,90 252,112" fill="#4DA3FF" opacity=".5"/>
+        <g stroke="#6EC6FF" stroke-width=".5" opacity=".15"><line x1="0" y1="40" x2="400" y2="40"/><line x1="0" y1="80" x2="400" y2="80"/><line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="160" x2="400" y2="160"/><line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="240" x2="400" y2="240"/><line x1="50" y1="0" x2="50" y2="280"/><line x1="100" y1="0" x2="100" y2="280"/><line x1="150" y1="0" x2="150" y2="280"/><line x1="200" y1="0" x2="200" y2="280"/><line x1="250" y1="0" x2="250" y2="280"/><line x1="300" y1="0" x2="300" y2="280"/><line x1="350" y1="0" x2="350" y2="280"/></g>
+        <text x="200" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#4DA3FF" letter-spacing="1.5" opacity=".7">ROOF REPLACEMENT</text>
+      </svg>
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.4 0 4.6.9 6.3 2.5"/><path d="M21 3v6h-6"/></svg></div>
+    </div>
+    <div class="svc-body"><h3>Roof Replacement</h3><p>Complete tear-off and replacement using premium materials built for Michigan weather.</p><button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button></div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <svg width="100%" height="100%" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs><linearGradient id="svc3a" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#061520"/><stop offset="100%" stop-color="#0C3050"/></linearGradient><linearGradient id="svc3b" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#4DA3FF" stop-opacity=".2"/><stop offset="100%" stop-color="#4DA3FF" stop-opacity="0"/></linearGradient></defs>
+        <rect width="400" height="280" fill="url(#svc3a)"/><rect width="400" height="280" fill="url(#svc3b)"/>
+        <rect x="30" y="90" width="340" height="14" rx="3" fill="rgba(77,163,255,.2)" stroke="#4DA3FF" stroke-width="1.2" opacity=".6"/>
+        <rect x="320" y="104" width="12" height="120" rx="2" fill="rgba(77,163,255,.15)" stroke="#4DA3FF" stroke-width="1" opacity=".5"/>
+        <g fill="#6EC6FF" opacity=".4"><ellipse cx="80" cy="130" rx="2" ry="5"/><ellipse cx="80" cy="148" rx="2" ry="5"/><ellipse cx="80" cy="166" rx="2" ry="5"/><ellipse cx="130" cy="138" rx="2" ry="5"/><ellipse cx="130" cy="156" rx="2" ry="5"/><ellipse cx="180" cy="132" rx="2" ry="5"/><ellipse cx="180" cy="150" rx="2" ry="5"/><ellipse cx="180" cy="168" rx="2" ry="5"/><ellipse cx="230" cy="140" rx="2" ry="5"/><ellipse cx="230" cy="158" rx="2" ry="5"/><ellipse cx="280" cy="134" rx="2" ry="5"/><ellipse cx="280" cy="152" rx="2" ry="5"/></g>
+        <g stroke="#4DA3FF" stroke-width=".5" opacity=".12"><line x1="30" y1="40" x2="370" y2="40"/><line x1="30" y1="56" x2="370" y2="56"/><line x1="30" y1="72" x2="370" y2="72"/></g>
+        <text x="200" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#4DA3FF" letter-spacing="1.5" opacity=".7">GUTTERS &amp; DRAINAGE</text>
+      </svg>
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s-6 8-6 12a6 6 0 0 0 12 0c0-4-6-12-6-12z"/></svg></div>
+    </div>
+    <div class="svc-body"><h3>Gutters</h3><p>Seamless gutters, guards, fascia, soffit, and drainage solutions that protect your home.</p><button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button></div>
+  </div>
+  <div class="svc">
+    <div class="svc-img">
+      <svg width="100%" height="100%" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="display:block">
+        <defs><linearGradient id="svc4a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#07121E"/><stop offset="100%" stop-color="#0B2C46"/></linearGradient><linearGradient id="svc4b" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#FFC928" stop-opacity=".1"/><stop offset="100%" stop-color="#4DA3FF" stop-opacity=".08"/></linearGradient></defs>
+        <rect width="400" height="280" fill="url(#svc4a)"/><rect width="400" height="280" fill="url(#svc4b)"/>
+        <g fill="none" stroke-linecap="round"><path d="M30,100 Q 70,82 110,100 T 190,100 T 270,100 T 370,100" stroke="#4DA3FF" stroke-width="2" opacity=".4"/><path d="M30,120 Q 70,102 110,120 T 190,120 T 270,120 T 370,120" stroke="#4DA3FF" stroke-width="2" opacity=".35"/><path d="M30,140 Q 70,122 110,140 T 190,140 T 270,140 T 370,140" stroke="#4DA3FF" stroke-width="2" opacity=".3"/><path d="M30,160 Q 70,142 110,160 T 190,160 T 270,160 T 370,160" stroke="#6EC6FF" stroke-width="2" opacity=".25"/><path d="M30,180 Q 70,162 110,180 T 190,180 T 270,180 T 370,180" stroke="#6EC6FF" stroke-width="2" opacity=".2"/><path d="M30,200 Q 70,182 110,200 T 190,200 T 270,200 T 370,200" stroke="#6EC6FF" stroke-width="1.5" opacity=".15"/></g>
+        <polygon points="200,30 360,95 40,95" fill="none" stroke="#FFC928" stroke-width="1.2" opacity=".3"/>
+        <circle cx="200" cy="65" r="22" fill="#FFC928" opacity=".06"/><circle cx="200" cy="65" r="8" fill="#FFC928" opacity=".15"/>
+        <text x="200" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#4DA3FF" letter-spacing="1.5" opacity=".7">INSULATION &amp; VENTILATION</text>
+      </svg>
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0 2 0 2 0"/><path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0 2 0 2 0"/></svg></div>
+    </div>
+    <div class="svc-body"><h3>Insulation</h3><p>Improve comfort and energy efficiency with proper attic insulation and ventilation.</p><button class="svc-learn" onclick="document.getElementById('contact').scrollIntoView()">Learn More <span>→</span></button></div>
+  </div>
+</div>
+</div>
+
+<!-- OUR PROCESS -->
+<div class="wrap">
+<div class="section-head">
+  <p class="eyebrow">Our Process</p>
+  <h2 class="h2">A simple, transparent process from start to finish.</h2>
+</div>
+<div class="process">
+  <div class="steps">
+    <div class="step">
+      <div class="bi"><span class="num">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/><rect x="9" y="1.5" width="6" height="3" rx="1"/></svg></div>
+      <div class="step-text"><b>Inspect</b><p>We inspect your roof, document everything clearly, and answer your questions honestly.</p></div>
+    </div>
+    <div class="step">
+      <div class="bi"><span class="num">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9.5 14h4a1.5 1.5 0 0 1 0 3h-4M9.5 14v3"/></svg></div>
+      <div class="step-text"><b>Estimate</b><p>You'll receive a detailed estimate with clear options, materials, and timelines-without pressure.</p></div>
+    </div>
+    <div class="step">
+      <div class="bi"><span class="num">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 14 2 2 4-4"/></svg></div>
+      <div class="step-text"><b>Install</b><p>Our crew gets the job done right, protects your property, and cleans up like we were never there.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- BOTTOM 3-COL -->
+<section id="projects" class="wrap">
+<div class="bottom-3">
+  <div class="bot-card">
+    <p class="eyebrow">Full Transparency. Always.</p>
+    <h3 class="h3">Ask us anything. We'll answer.</h3>
+    <p>This is a non-rushed process.<br>We want getting your roof to feel calm and enjoyable-not rushed or confusing.</p>
+    <p>Come into our office. Get to know us. Ask us anything. We'll give you honest answers, clear guidance, and straightforward recommendations.</p>
+    <p class="script-y" style="margin-top:8px">Built on honesty.</p>
+  </div>
+  <div class="bot-card">
+    <div class="bot-head">
+      <h3 class="h3">Real roofs. Real results.</h3>
+      <a class="view-all" href="#projects">View All Projects →</a>
+    </div>
+    <p class="eyebrow" style="margin-top:-6px;margin-bottom:14px">Recent Projects</p>
+    <div class="ba-grid">
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba1/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba2/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+      <div class="ba-mini"><img src="https://picsum.photos/seed/ba3/300/260" alt=""><span class="ba-lbl l">BEFORE</span><span class="ba-lbl r">AFTER</span><span class="div"></span></div>
+    </div>
+  </div>
+  <div id="reviews" class="bot-card reviews-card">
+    <div class="bot-head">
+      <p class="eyebrow" style="margin:0">What Homeowners Are Saying</p>
+      <a class="view-all" href="#reviews">View All Reviews →</a>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p class="quote">"Be the first to review us!"</p>
+    <p class="name">Homeowner • Address</p>
+    <div class="dots"><span></span><span></span><span class="on"></span><span></span></div>
+  </div>
+</div>
+</section>
+
+<!-- OWENS CORNING ROOF VISUALIZER -->
+<section id="visualize" class="wrap visualizer-section">
+  <div class="section-head">
+    <p class="eyebrow">Design Tool</p>
+    <h2 class="h2">Visualize your new roof.</h2>
+  </div>
+  <div class="visualizer-trigger">
+    <button class="btn-viz" id="viz-toggle" aria-expanded="false" aria-controls="viz-body">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg>
+      Try It On Your Home
+    </button>
+  </div>
+  <div class="visualizer-body" id="viz-body">
+    <div class="visualizer-card">
+      <div id="visualizer" data-zip="48130"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE WORK -->
+<section class="wrap where-section">
+  <div class="section-head">
+    <p class="eyebrow">Where We Work</p>
+    <h2 class="h2">Anchored in Ann Arbor. <span class="b">Serving Southeast Michigan.<svg class="underline" viewBox="0 0 380 9" preserveAspectRatio="none"><path d="M2 6 Q 95 1 190 4 T 378 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+  </div>
+  <div class="where-card">
+    <div class="where-left">
+      <h2>Our home base is <span>Ann Arbor.</span><br>Our reach covers the region.</h2>
+      <p style="margin-top:14px">We're a locally rooted company - our office is in Ann Arbor, and we serve communities across Washtenaw County, western Wayne County, Livingston County, and select Oakland County communities.</p>
+      <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue);flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span style="font-size:13px;color:var(--t2)">3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103</span>
+      </div>
+      <div style="margin-top:10px">
+        <a href="tel:7342011000" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--blue);font-weight:600;text-decoration:none">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (734) 201-1000
+        </a>
+      </div>
+    </div>
+    <div class="where-right">
+      <div class="where-group">
+        <div class="wg-label">Home Base</div>
+        <div class="where-tags">
+          <span class="where-tag home">Ann Arbor</span>
+          <span class="where-tag">Ypsilanti</span>
+          <span class="where-tag">Plymouth</span>
+          <span class="where-tag">Dexter</span>
+          <span class="where-tag">Chelsea</span>
+        </div>
+      </div>
+      <div class="where-group">
+        <div class="wg-label">Also Serving</div>
+        <div class="where-tags">
+          <span class="where-tag">Saline</span>
+          <span class="where-tag">Canton</span>
+          <span class="where-tag">Northville</span>
+          <span class="where-tag">Brighton</span>
+          <span class="where-tag">Howell</span>
+          <span class="where-tag">Whitmore Lake</span>
+          <span class="where-tag">Pinckney</span>
+          <span class="where-tag">Manchester</span>
+          <span class="where-tag">Milan</span>
+          <span class="where-tag">Dundee</span>
+        </div>
+      </div>
+      <div class="where-group">
+        <div class="wg-label">Select Oakland County</div>
+        <div class="where-tags">
+          <span class="where-tag">Bloomfield Hills</span>
+          <span class="where-tag">West Bloomfield</span>
+          <span class="where-tag">Birmingham</span>
+          <span class="where-tag">Farmington Hills</span>
+          <span class="where-tag">Novi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA / CONTACT -->
+<section id="contact" class="wrap">
+<div class="section-head">
+  <p class="eyebrow">Get Started</p>
+  <h2 class="h2">Whenever you're ready, <span class="b">we're here to help.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+</div>
+<div class="final-cta">
+  <a href="#" class="logo" style="align-self:flex-start;padding-top:4px;">
+    <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+  </a>
+  <div class="fc-right">
+    <div class="fc-msg">
+      <p>Fill out the form to schedule your free inspection, or give us a call directly.</p>
+      <span class="script-y">Fast, easy, and no pressure.</span>
+      <a href="tel:7342011000" class="phone-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (734) 201-1000
+      </a>
+      <span class="phone-note">Msg &amp; data rates may apply for SMS · Reply STOP to opt out</span>
+    </div>
+
+    <!-- FORM SIDE -->
+    <div id="form-wrapper">
+      <form id="lead-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Full Name *</label>
+            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Mobile Phone *</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(734) 555-0100" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="jane@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="f-address">Property Address *</label>
+            <input type="text" id="f-address" name="address" placeholder="123 Main St, Ann Arbor" required autocomplete="street-address">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-service">Service Needed</label>
+          <select id="f-service" name="service" autocomplete="off">
+            <option value="">Select a service…</option>
+            <option>Roof Inspection</option>
+            <option>Roof Replacement</option>
+            <option>New Roof Installation</option>
+            <option>Gutters</option>
+            <option>Insulation</option>
+            <option>Storm Damage Assessment</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-notes">Additional Notes</label>
+          <textarea id="f-notes" name="notes" placeholder="Any details about your roof or project…" autocomplete="off"></textarea>
+        </div>
+        <div class="sms-consent-block">
+          <label class="sms-consent-label" for="f-sms-consent">
+            <input type="checkbox" id="f-sms-consent" name="sms_consent" required>
+            <span>I agree to receive SMS text messages from <strong>Rooftop Heroes LLC</strong> regarding my service request, including inspection scheduling, appointment confirmations, estimates, and project updates. Message frequency varies based on project needs. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help. View our <a href="/privacy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">SMS Terms</a>.</span>
+          </label>
+          <p class="consent-meta">Your information is only used for communications related to your active service request. We never sell your data or send marketing messages.</p>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Schedule My Free Inspection
+        </button>
+      </form>
+
+      <!-- SUCCESS SUMMARY — shown after Calendly confirms booking -->
+      <div class="form-success" id="form-success">
+        <span class="success-icon">🎉</span>
+        <span class="success-title">Your inspection is scheduled!</span>
+        <p class="success-sub">You'll receive a confirmation from Calendly and an SMS reminder before your visit.</p>
+        <div class="success-summary" id="success-summary">
+          <!-- populated by JS -->
+        </div>
+        <p class="success-note">Reply <strong>STOP</strong> to opt out of SMS at any time · Questions? Call <a href="tel:7342011000" style="color:var(--blue)">(734) 201-1000</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="about" class="wrap">
+<div class="foot-bottom-left" style="display:flex;align-items:center;width:100%;gap:20px;margin-top:-15px;">
+  <span style="white-space:nowrap;">Proudly serving Southeast Michigan</span>
+  <div style="flex:1;text-align:center;">
+    <a href="https://maps.app.goo.gl/SYQMvCSL7KwqEw2U7" target="_blank" style="text-decoration:none;color:inherit;white-space:nowrap;">3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103</a>
+  </div>
+  <span style="white-space:nowrap;margin-left:auto;">Licensed &amp; Insured · #262600515</span>
+</div>
+<div style="height:15px;"></div>
+  <div class="foot-row">
+    <a href="#" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+    <div class="foot-links" style="margin-left:-80px;">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v3.2h5.3c-.2 1.4-1.6 4.2-5.3 4.2-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.6 4 14.5 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.6-3.6 8.6-8.8 0-.6-.1-1-.1-1.4H12z"/></svg></a>
+    </div>
+  </div>
+  <div class="foot-sms">
+    <div class="foot-sms-left">
+      <div class="foot-sms-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        SMS Communication Consent
+      </div>
+      <p>By submitting a form on this website or contacting Rooftop Heroes LLC, you consent to receive SMS messages related to roofing estimates, appointment scheduling, project updates, and customer support. If you request an instant quote via our online quoting tool, that tool may also capture your contact information - please review the consent notice within the quoting tool before submitting.</p>
+    </div>
+    <div class="foot-sms-right">
+      <div class="foot-sms-tags">
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Consent required before first message</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No marketing or promotional messages</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Msg &amp; data rates may apply · Frequency varies</span>
+        <span class="foot-sms-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Consent is not a condition of purchase</span>
+      </div>
+      <p class="foot-sms-opt">Reply <strong>STOP</strong> to opt out &nbsp;·&nbsp; Reply <strong>HELP</strong> for help &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">SMS Terms</a></p>
+    </div>
+  </div>
+<br>
+</footer>
+
+<script>
+// ── Visualizer toggle ──────────────────────────────────────────────
+(function(){
+  var btn = document.getElementById('viz-toggle');
+  var body = document.getElementById('viz-body');
+  var widgetStarted = false;
+  if (!btn || !body) return;
+  function loadVisualizer() {
+    if (widgetStarted) return;
+    widgetStarted = true;
+    var s = document.createElement('script');
+    s.src = 'https://apis.owenscorning.com/client/widget.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }
+  window.addEventListener('load', function(){
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadVisualizer, { timeout: 2500 });
+    } else {
+      setTimeout(loadVisualizer, 1500);
+    }
+  });
+  btn.addEventListener('click', function(){
+    loadVisualizer();
+    var isOpen = body.classList.contains('open');
+    if (isOpen) {
+      body.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg> Try It On Your Home';
+    } else {
+      body.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> Close Visualizer';
+      setTimeout(function(){ body.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+    }
+  });
+})();
+
+// ── Lead form + Calendly popup ─────────────────────────────────────
+(function(){
+  var CALENDLY_URL = 'https://calendly.com/admin-rooftopheroes';
+
+  var form    = document.getElementById('lead-form');
+  var btn     = document.getElementById('submit-btn');
+  var success = document.getElementById('form-success');
+  var summary = document.getElementById('success-summary');
+  if (!form) return;
+
+  // Real-time phone formatting
+  var phoneInput = document.getElementById('f-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function(){
+      var v = this.value.replace(/\D/g, '');
+      if (v.length >= 10)
+        this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6,10);
+    });
+  }
+
+  // Stash form data so we can show it in the success summary
+  var leadData = {};
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var name    = document.getElementById('f-name').value.trim();
+    var phone   = document.getElementById('f-phone').value.trim();
+    var email   = document.getElementById('f-email').value.trim();
+    var address = document.getElementById('f-address').value.trim();
+    var service = document.getElementById('f-service').value;
+    var notes   = document.getElementById('f-notes').value.trim();
+    var consent = document.getElementById('f-sms-consent').checked;
+
+    if (!name || !phone || !address) {
+      alert('Please fill in your name, phone number, and property address.');
+      return;
+    }
+    if (!consent) {
+      alert('Please check the SMS consent box before submitting. This is required to send you appointment updates.');
+      return;
+    }
+
+    // Save for summary display
+    leadData = { name: name, phone: phone, email: email, address: address, service: service, notes: notes };
+
+    btn.disabled = true;
+    btn.textContent = 'Opening scheduler…';
+
+    // Open Calendly popup, pre-filling name + email so the customer
+    // doesn't have to retype them inside the Calendly modal.
+    var prefill = {
+      name: name,
+      email: email || undefined
+    };
+
+    // Calendly popup — opens the calendar picker overlay
+    if (window.Calendly) {
+      Calendly.initPopupWidget({
+        url: CALENDLY_URL,
+        prefill: prefill
+      });
+    } else {
+      // Calendly script still loading — wait briefly then try again
+      setTimeout(function(){
+        if (window.Calendly) {
+          Calendly.initPopupWidget({ url: CALENDLY_URL, prefill: prefill });
+        } else {
+          // Fallback: open Calendly in a new tab
+          window.open(CALENDLY_URL, '_blank');
+          showSuccess(leadData, null);
+        }
+      }, 1500);
+    }
+
+    // Re-enable button in case user closes Calendly without booking
+    setTimeout(function(){
+      if (!success.style.display || success.style.display === 'none') {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Schedule My Free Inspection';
+      }
+    }, 60000); // 1-minute safety reset
+  });
+
+  // Listen for Calendly confirmation event
+  window.addEventListener('message', function(e){
+    if (e.data && e.data.event && e.data.event === 'calendly.event_scheduled') {
+      var payload = e.data.payload || {};
+      showSuccess(leadData, payload);
+    }
+  });
+
+  function showSuccess(data, calendlyPayload) {
+    // Build summary rows
+    var rows = '';
+    var icon = function(path){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + path + '</svg>'; };
+
+    rows += row(icon('<circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>'),
+                '<strong>Name</strong>', data.name);
+    rows += row(icon('<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>'),
+                '<strong>Phone</strong>', data.phone);
+    if (data.email) {
+      rows += row(icon('<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'),
+                  '<strong>Email</strong>', data.email);
+    }
+    rows += row(icon('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
+                '<strong>Property</strong>', data.address);
+    if (data.service) {
+      rows += row(icon('<path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'),
+                  '<strong>Service</strong>', data.service);
+    }
+    if (data.notes) {
+      rows += row(icon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
+                  '<strong>Notes</strong>', data.notes);
+    }
+
+    // If Calendly returned event info, show the scheduled time
+    if (calendlyPayload && calendlyPayload.event && calendlyPayload.event.start_time) {
+      var dt = new Date(calendlyPayload.event.start_time);
+      var formatted = dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'})
+                    + ' at ' + dt.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+      rows = row(icon('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'),
+                 '<strong>Inspection scheduled</strong>',
+                 '<span style="color:var(--blue);font-weight:600">' + formatted + '</span>') + rows;
+    }
+
+    summary.innerHTML = rows;
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  function row(iconSvg, label, value) {
+    return '<div class="ss-row">' + iconSvg + '<span>' + label + ': ' + value + '</span></div>';
+  }
+})();
+</script>
+
+</body>
+</html>
