@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get an Instant Quote — Rooftop Heroes</title>
+<meta name="description" content="Get an instant roofing quote from Rooftop Heroes. Serving Southeast Michigan with honest pricing and zero pressure.">
+
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get an Instant Quote — Rooftop Heroes">
+<meta property="og:description" content="Metro-Detroit roofing - get an instant estimate in seconds.">
+<meta property="og:image" content="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/roofing1.jpg">
+
+<!-- Roofle Embedded Widget - script placed in body per Roofle docs -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ── Design tokens (match main site exactly) ── */
+:root{
+  --bg:#06111F;--c1:#0B1F33;--c2:#102A43;--c3:#132F4C;
+  --t1:#F4F8FF;--t2:#B9C7D8;--t3:#9FB2C7;
+  --blue:#4DA3FF;--blue3:#6EC6FF;--blueS:#5AB7FF;
+  --yellow:#FFC928;--yellow2:#FFD34D;
+  --border:rgba(110,198,255,.18);
+  --card:rgba(13,31,51,.85);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font:16px/1.6 Inter,sans-serif;
+  background:var(--bg);color:var(--t1);overflow-x:hidden;
+  min-height:100vh;display:flex;flex-direction:column;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 20%,rgba(77,163,255,.08),transparent 70%),
+    radial-gradient(ellipse 70% 60% at 85% 80%,rgba(31,122,224,.05),transparent 70%);
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+
+/* ── NAV ── */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(6,17,31,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1320px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{width:44px;height:44px;flex-shrink:0;object-fit:contain;border-radius:10px;
+  filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
+.logo .lt b{font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.3px;display:block}
+.logo .lt span{font-size:8px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:3px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.nav-link{font-size:13px;font-weight:500;color:var(--t2);padding:7px 12px;border-radius:7px;transition:.15s;border:1px solid transparent}
+.nav-link:hover{color:var(--t1);border-color:var(--border);background:rgba(77,163,255,.06)}
+.nav-link.primary{background:var(--blue);color:#fff;border-color:transparent;font-weight:600}
+.nav-link.primary:hover{background:var(--blue3)}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 14px;border-radius:8px;
+  border:1.5px solid var(--blue3);font-weight:600;font-size:13px;color:var(--t1);
+}
+.phone-btn svg{width:14px;height:14px;color:var(--blue)}
+
+/* ── HERO STRIP ── */
+.hero-strip{
+  padding:52px 0 0;
+  text-align:center;
+  position:relative;
+  margin-bottom:0;
+}
+.eyebrow{color:var(--blue);font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:block}
+.h1{font-weight:900;font-size:52px;line-height:1.05;letter-spacing:-2px;margin-bottom:16px}
+.h1 .emph{color:var(--blue);position:relative;display:inline-block}
+.h1 .emph svg.ul{position:absolute;left:-2%;right:-2%;bottom:-8px;width:104%;height:11px;display:block}
+.hero-lead{color:var(--t2);font-size:16px;line-height:1.6;max-width:520px;margin:0 auto 28px}
+
+/* trust pills */
+.trust-pills{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:0;padding-bottom:44px;
+}
+.trust-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 14px;border-radius:20px;
+  background:rgba(77,163,255,.07);border:1px solid rgba(110,198,255,.2);
+  font-size:12px;font-weight:500;color:var(--t2);
+}
+.trust-pill svg{width:13px;height:13px;color:var(--blue);flex-shrink:0}
+.trust-pill.yellow svg{color:var(--yellow)}
+.trust-pill.yellow{border-color:rgba(255,201,40,.25);background:rgba(255,201,40,.06)}
+
+/* ── WIDGET FRAME ── */
+.widget-section{padding:0 0 64px;margin-top:-1px;}
+.widget-wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:28px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.widget-shell{
+  overflow:hidden;
+  border-radius:12px;
+}
+#roof-quote-pro-embedded{
+  display:block;
+}
+
+/* ── DIVIDER ── */
+.divider{
+  height:1px;background:var(--border);
+  margin:0 0 56px;
+  position:relative;
+}
+.divider::after{
+  content:'';position:absolute;left:50%;transform:translateX(-50%);
+  top:-3px;width:60px;height:6px;background:var(--blue);border-radius:3px;opacity:.35;
+}
+
+/* ── EXPLORE LINKS ── */
+.explore{padding-bottom:72px}
+.explore-head{text-align:center;margin-bottom:36px}
+.explore-head .h2{font-weight:800;font-size:26px;letter-spacing:-.8px;line-height:1.2}
+.explore-head p{color:var(--t2);font-size:14px;margin-top:8px}
+
+.explore-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+}
+
+.exp-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px 22px;
+  display:flex;flex-direction:column;gap:12px;
+  box-shadow:var(--shadow);
+  transition:.2s;
+  text-decoration:none;
+  color:inherit;
+  position:relative;overflow:hidden;
+}
+.exp-card::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(77,163,255,.06),transparent 70%);
+  opacity:0;transition:.25s;
+}
+.exp-card:hover{border-color:rgba(110,198,255,.38);transform:translateY(-2px);box-shadow:var(--shadow),0 0 28px rgba(77,163,255,.1)}
+.exp-card:hover::before{opacity:1}
+
+.exp-icon{
+  width:42px;height:42px;border-radius:10px;
+  background:rgba(77,163,255,.12);border:1px solid rgba(77,163,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.exp-icon svg{width:20px;height:20px;color:var(--blue);stroke-width:1.8}
+.exp-icon.yellow-i{background:rgba(255,201,40,.1);border-color:rgba(255,201,40,.2)}
+.exp-icon.yellow-i svg{color:var(--yellow)}
+
+.exp-card h3{font-size:16px;font-weight:700;line-height:1.2}
+.exp-card p{font-size:13px;color:var(--t2);line-height:1.55;flex:1}
+.exp-card .exp-cta{
+  font-size:12.5px;font-weight:600;color:var(--blue);
+  display:inline-flex;align-items:center;gap:5px;
+  margin-top:auto;
+}
+.exp-card:hover .exp-cta{color:var(--blue3)}
+
+/* ── FOOTER ── */
+footer{
+  margin-top:auto;
+  border-top:1px solid var(--border);
+  padding:28px 0 24px;
+}
+
+.foot-top{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:24px;align-items:center;margin-bottom:20px;
+  padding-bottom:20px;border-bottom:1px solid var(--border);
+}
+.foot-logo-img{width:38px;height:38px;border-radius:9px;
+  filter:brightness(0) saturate(100%) invert(57%) sepia(98%) saturate(1316%) hue-rotate(190deg) brightness(101%) contrast(101%)}
+.foot-logo .lt b{font-weight:900;font-size:14px;display:block}
+.foot-logo .lt span{font-size:7px;color:var(--t3);letter-spacing:1.4px;display:block;margin-top:2px}
+.foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.foot-links a{font-size:13px;color:var(--t2)}
+.foot-links a:hover{color:var(--blue)}
+.social{display:flex;gap:9px;align-items:center}
+.social a{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:.2s}
+.social a:hover{color:var(--blue);border-color:var(--blue)}
+.social svg{width:14px;height:14px}
+
+/* SMS disclosure */
+.foot-sms{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  padding-bottom:20px;margin-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+.foot-sms-label{
+  display:flex;align-items:center;gap:7px;
+  font-size:10px;font-weight:700;color:var(--blue);
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;
+}
+.foot-sms-label svg{width:12px;height:12px;flex-shrink:0}
+.foot-sms-left p{font-size:11.5px;color:var(--t3);line-height:1.65}
+.foot-sms-right{display:flex;flex-direction:column;gap:6px}
+.foot-sms-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.foot-sms-tag{
+  font-size:11px;color:var(--t3);
+  background:rgba(77,163,255,.05);border:1px solid rgba(110,198,255,.1);
+  border-radius:5px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;
+}
+.foot-sms-tag svg{width:10px;height:10px;color:var(--blue);flex-shrink:0}
+.foot-sms-opt{font-size:11px;color:var(--t3);line-height:1.6}
+.foot-sms-opt strong{color:var(--t2)}
+.foot-sms-opt a{color:var(--blue);text-decoration:underline}
+
+.foot-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:8px;
+}
+.foot-bottom-left{font-size:11px;color:var(--t3);line-height:1.7}
+.foot-tag{font-size:11px;color:var(--t3)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .explore-grid{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr;text-align:center;gap:14px}
+  .foot-logo{display:flex;justify-content:center;align-items:center;gap:10px}
+  .foot-links{justify-content:center}
+  .social{justify-content:center}
+  .foot-sms{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;align-items:center;text-align:center}
+}
+@media(max-width:640px){
+  .h1{font-size:38px}
+  .explore-grid{grid-template-columns:1fr}
+  .nav-link.hide-sm{display:none}
+  .nav-inner .phone-btn{display:none}
+}
+@media(max-width:420px){
+  .h1{font-size:32px}
+}
+
+/* ── Page fade-in ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-strip{animation:fadeUp .55s ease both}
+.widget-shell{animation:fadeUp .65s .1s ease both}
+.explore{animation:fadeUp .6s .18s ease both}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+      <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html#services" class="nav-link hide-sm">Services</a>
+      <a href="index.html#story" class="nav-link hide-sm">Our Story</a>
+      <a href="index.html#contact" class="nav-link hide-sm">Free Inspection</a>
+      <a href="tel:7342011000" class="phone-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (734) 201-1000
+      </a>
+      <a href="index.html" class="nav-link primary">← Main Site</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO STRIP -->
+<section class="hero-strip wrap">
+  <span class="eyebrow">Instant Estimate · No Obligation</span>
+  <h1 class="h1">See what your roof<br>could cost in <span class="emph">seconds.<svg class="ul" viewBox="0 0 200 11" preserveAspectRatio="none"><path d="M2 7 Q 50 1 100 5 T 198 7" stroke="#FFC928" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span></h1>
+  <p class="hero-lead">Enter your address and get a real-time roofing estimate — no phone call required. Zero pressure, always.</p>
+
+  <div class="trust-pills">
+    <span class="trust-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      Licensed &amp; Insured · #262600515
+    </span>
+    <span class="trust-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+      Owens Corning Preferred Contractor
+    </span>
+    <span class="trust-pill yellow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Honest Pricing · Zero Pressure
+    </span>
+    <span class="trust-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.5"/><path d="M22 21v-1a4 4 0 0 0-3-3.87"/></svg>
+      Local &amp; Family-Owned · Ann Arbor, MI
+    </span>
+  </div>
+</section>
+
+<!-- QUOTE LAUNCH -->
+<section class="widget-section wrap">
+  <div class="widget-wrap">
+    <div class="widget-shell">
+      <div id="roof-quote-pro-embedded"></div>
+    </div>
+  </div>
+</section>
+<script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=6VD02-sC9VtQT_bSwTMPY" async></script>
+
+<!-- DIVIDER -->
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- EXPLORE LINKS -->
+<section class="explore wrap">
+  <div class="explore-head">
+    <h2 class="h2">Want to learn more about Rooftop Heroes first?</h2>
+    <p>See our services, read our story, browse real projects, and get to know the team.</p>
+  </div>
+
+  <div class="explore-grid">
+
+    <!-- Roof Color Visualizer -->
+    <a href="index.html#visualize" class="exp-card">
+      <div class="exp-icon yellow-i">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="14" r="3"/></svg>
+      </div>
+      <h3>Roof Color Visualizer</h3>
+      <p>See how different shingle colors look on your actual home before making a decision. Try it free with our design tool.</p>
+      <span class="exp-cta">Try the visualizer <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+    <!-- Free Inspection -->
+    <a href="index.html#contact" class="exp-card">
+      <div class="exp-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </div>
+      <h3>Schedule a Free Inspection</h3>
+      <p>Prefer to meet in person? We'll come out, inspect your roof, answer every question, and give you an honest written estimate — no pressure, ever.</p>
+      <span class="exp-cta">Book your free inspection <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+    <!-- Our Services -->
+    <a href="index.html#services" class="exp-card">
+      <div class="exp-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </div>
+      <h3>Our Services</h3>
+      <p>From new installations and full replacements to gutters and attic insulation — see everything Rooftop Heroes offers homeowners across Southeast Michigan.</p>
+      <span class="exp-cta">See all services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+    <!-- Our Story -->
+    <a href="index.html#story" class="exp-card">
+      <div class="exp-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      </div>
+      <h3>Read Our Story</h3>
+      <p>We built Rooftop Heroes to make roofing feel different. Less pressure, better communication, and crews that take real pride in their work.</p>
+      <span class="exp-cta">Get to know us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+    <!-- Real Projects -->
+    <a href="index.html#projects" class="exp-card">
+      <div class="exp-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+      </div>
+      <h3>Browse Real Projects</h3>
+      <p>See before-and-after photos from real Southeast Michigan homes we've worked on. Every project, done the right way.</p>
+      <span class="exp-cta">View the gallery <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+    <!-- Main Site -->
+    <a href="index.html" class="exp-card">
+      <div class="exp-icon yellow-i">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      </div>
+      <h3>Visit the Main Site</h3>
+      <p>Head back to rooftopheroes.com to explore everything — our full story, services, team, service area, and more about who we are.</p>
+      <span class="exp-cta" style="color:var(--yellow)">Go to rooftopheroes.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+
+    <!-- Top: logo · links · social -->
+    <div class="foot-top">
+      <a href="index.html" class="logo foot-logo">
+        <img class="foot-logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
+        <div class="lt"><b>ROOFTOP HEROES</b><span>ROOFING · GUTTERS · INSULATION</span></div>
+      </a>
+      <div class="foot-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">SMS Terms</a>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v3.2h5.3c-.2 1.4-1.6 4.2-5.3 4.2-3.2 0-5.8-2.6-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.6 4 14.5 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.6-3.6 8.6-8.8 0-.6-.1-1-.1-1.4H12z"/></svg></a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="foot-bottom">
+      <div class="foot-bottom-left">
+        Proudly serving Southeast Michigan &nbsp;·&nbsp;
+        <a href="https://maps.app.goo.gl/SYQMvCSL7KwqEw2U7" target="_blank" style="color:inherit">3027 Miller Rd, Suite 11 · Ann Arbor, MI 48103</a>
+      </div>
+      <span class="foot-tag">Licensed &amp; Insured · #262600515</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
