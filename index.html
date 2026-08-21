@@ -64,6 +64,12 @@ ul{list-style:none}
 .btn-y{background:var(--yellow);color:#06111F;border:none}
 .btn-y:hover{background:var(--yellow2)}
 .btn-lg{padding:14px 26px;font-size:15px}
+.btn-f{
+  background:rgba(255,201,40,.09);color:var(--yellow2);
+  border:1.5px solid rgba(255,201,40,.42);
+}
+.btn-f:hover{background:rgba(255,201,40,.16);border-color:var(--yellow);color:var(--yellow)}
+.btn-f .ext{opacity:.65;margin-left:-2px}
 
 /* NAV */
 .nav{
@@ -409,6 +415,113 @@ ul{list-style:none}
   margin-top:14px;line-height:1.6;
 }
 
+/* GET STARTED - JobTread intake + scheduling (restyled to site theme) */
+.jt-section{padding-bottom:40px}
+.jt-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:36px 40px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+}
+.jt-left h3{font-size:28px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:10px}
+.jt-left h3 span{color:var(--blue)}
+.jt-left > p{font-size:14px;color:var(--t2);line-height:1.6}
+.jt-steps{display:flex;flex-direction:column;gap:15px;margin-top:22px}
+.jt-step{display:flex;gap:12px;align-items:flex-start}
+.jt-step .jt-num{
+  width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  background:rgba(77,163,255,.14);border:1px solid rgba(110,198,255,.28);
+  color:var(--blue);font:800 12px Inter,sans-serif;
+  display:flex;align-items:center;justify-content:center;
+}
+.jt-step b{display:block;font-size:14px;font-weight:700;color:var(--t1);margin-bottom:2px}
+.jt-step p{font-size:13px;color:var(--t2);line-height:1.55}
+.jt-aside{
+  margin-top:22px;display:flex;align-items:flex-start;gap:10px;
+  background:rgba(77,163,255,.06);border:1px solid rgba(110,198,255,.18);
+  border-radius:10px;padding:12px 14px;
+}
+.jt-aside svg{width:16px;height:16px;color:var(--blue);flex-shrink:0;margin-top:1px}
+.jt-aside span{font-size:12.5px;color:var(--t2);line-height:1.55}
+.jt-callbox{margin-top:24px;padding-top:22px;border-top:1px solid var(--border)}
+
+/* .jt-fields wraps the service select plus the JobTread form element */
+.jt-fields{display:flex;flex-direction:column;gap:14px}
+.jt-formel{display:flex;flex-direction:column;gap:14px}
+.jt-fields .jt-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.jt-fields .jt-field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.jt-fields label{font-size:12px;font-weight:600;color:var(--t2);letter-spacing:.4px}
+.jt-fields .jt-req{color:var(--yellow);font-weight:700}
+.jt-fields input,
+.jt-fields select,
+.jt-fields textarea{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  border-radius:8px;padding:10px 13px;
+  color:var(--t1);font:14px/1.4 Inter,sans-serif;
+  outline:none;transition:.2s;width:100%;
+  -webkit-appearance:none;appearance:none;
+}
+.jt-fields input:focus,
+.jt-fields select:focus,
+.jt-fields textarea:focus{border-color:var(--blue);background:rgba(77,163,255,.06)}
+.jt-fields input::placeholder,
+.jt-fields textarea::placeholder{color:var(--t3)}
+/* Undo the text-input styling above for checkboxes: appearance:none would
+   strip the native checkmark, and the inherited padding inflated the box. */
+.jt-fields input[type=checkbox]{
+  -webkit-appearance:auto;appearance:auto;
+  width:16px;height:16px;flex-shrink:0;
+  padding:0;border:0;border-radius:0;background:none;
+  accent-color:var(--blue);cursor:pointer;
+}
+.jt-fields input[type=checkbox]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.jt-fields select{
+  cursor:pointer;padding-right:34px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239FB2C7' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:12px;
+}
+.jt-fields select option{background:#0B1F33;color:var(--t1)}
+.jt-fields textarea{resize:vertical;min-height:76px}
+.jt-fields input[type=file]{padding:8px 10px;font-size:12.5px;color:var(--t2);cursor:pointer}
+.jt-fields input[type=file]::file-selector-button{
+  background:rgba(77,163,255,.14);border:1px solid rgba(110,198,255,.3);
+  color:var(--blue);border-radius:6px;padding:6px 12px;margin-right:12px;
+  font:600 12px Inter,sans-serif;cursor:pointer;transition:.2s;
+}
+.jt-fields input[type=file]::file-selector-button:hover{background:rgba(77,163,255,.24);color:var(--blue3)}
+.jt-hint{font-size:11px;color:var(--t3);line-height:1.5}
+
+/* Two actions: JobTread submit, and open the inspection scheduler */
+.jt-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:2px}
+.jt-submit{
+  background:var(--blue);color:#fff;border:none;border-radius:8px;
+  padding:13px 16px;font:600 14.5px Inter,sans-serif;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:.2s;width:100%;text-align:center;
+}
+.jt-submit svg{flex-shrink:0}
+.jt-submit:hover{background:var(--blue3)}
+.jt-submit:disabled{cursor:not-allowed}
+.jt-submit-alt{background:transparent;color:#fff;border:1.5px solid var(--blue3)}
+.jt-submit-alt:hover{background:rgba(110,198,255,.1)}
+
+/* Inline status for the JobTread send that follows a confirmed booking */
+.jt-sync{
+  margin-top:12px;font-size:12px;line-height:1.6;color:var(--t3);
+  border:1px solid var(--border);border-radius:8px;padding:10px 12px;
+  background:rgba(255,255,255,.03);
+}
+.jt-sync.ok{color:var(--blue3);border-color:rgba(110,198,255,.3);background:rgba(77,163,255,.07)}
+.jt-sync.warn{color:var(--yellow2);border-color:rgba(255,201,40,.32);background:rgba(255,201,40,.07)}
+
+@media (max-width:880px){
+  .jt-card{grid-template-columns:1fr;gap:26px;padding:24px}
+}
+@media (max-width:640px){
+  .jt-fields .jt-row{grid-template-columns:1fr}
+  .jt-actions{grid-template-columns:1fr}
+}
+
 /* WHERE WE WORK */
 .where-section{padding-bottom:80px}
 .where-card{
@@ -734,6 +847,14 @@ footer{padding:32px 0 28px}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         See Real Projects
       </button>
+      <a class="btn btn-f btn-lg" href="https://offers.purefinancegroup.com/rooftop-heroes"
+         target="_blank" rel="noopener"
+         title="See monthly payment options - no hard credit pull to apply"
+         aria-label="Explore financing options - opens the Rooftop Heroes financing page in a new tab">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M14.6 9.6c0-1-1.2-1.8-2.6-1.8s-2.6.8-2.6 1.8 1.2 1.5 2.6 1.8 2.6.8 2.6 1.9-1.2 1.8-2.6 1.8-2.6-.8-2.6-1.8"/></svg>
+        Explore Financing Options
+        <svg class="ext" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+      </a>
     </div>
     <div style="margin-top:18px;display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(110,198,255,.2);border-radius:20px;background:rgba(77,163,255,.06)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue);flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1056,59 +1177,59 @@ footer{padding:32px 0 28px}
   </div>
 </section>
 
-<!-- FINAL CTA / CONTACT -->
-<section id="contact" class="wrap">
+<!-- GET STARTED  -  JobTread intake + inspection scheduling (merged) -->
+<section id="contact" class="wrap jt-section">
 <div class="section-head">
   <p class="eyebrow">Get Started</p>
   <h2 class="h2">Whenever you're ready, <span class="b">we're here to help.<svg class="underline" viewBox="0 0 280 9" preserveAspectRatio="none"><path d="M2 6 Q 70 1 140 4 T 278 6" stroke="#FFC928" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span></h2>
 </div>
-<div class="final-cta">
-  <a href="#" class="logo" style="align-self:flex-start;padding-top:4px;">
-    <img class="logo-img" src="https://raw.githubusercontent.com/gblservers/rooftopheroes/refs/heads/main/logo1.png" alt="Rooftop Heroes logo">
-  </a>
-  <div class="fc-right">
-    <div class="fc-msg">
-      <p>Fill out the form to schedule your free inspection, or give us a call directly.</p>
+<div class="jt-card">
+
+  <!-- LEFT: the pitch -->
+  <div class="jt-left">
+    <h3>Skip the phone tag.<br><span>Send photos, get answers.</span></h3>
+    <p>Fill this out once. Send it over for review, or pick an inspection time right here - either way it reaches the same team, and your photos come with it.</p>
+    <div class="jt-steps">
+      <div class="jt-step">
+        <span class="jt-num">1</span>
+        <div><b>Tell us the basics</b><p>Your name, the property address, and a short note about what's going on.</p></div>
+      </div>
+      <div class="jt-step">
+        <span class="jt-num">2</span>
+        <div><b>Attach photos or documents</b><p>Roof shots, interior leaks, insurance paperwork - up to 50 MB total.</p></div>
+      </div>
+      <div class="jt-step">
+        <span class="jt-num">3</span>
+        <div><b>Send it, or book a time</b><p>Send your details for review, or schedule a free inspection and we'll do both at once.</p></div>
+      </div>
+    </div>
+    <div class="jt-aside">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span>Not sure what to photograph? Send whatever you can - even one wide shot from the ground gives us a useful starting point.</span>
+    </div>
+    <div class="jt-callbox fc-msg">
       <span class="script-y">Fast, easy, and no pressure.</span>
       <a href="tel:7342011000" class="phone-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (734) 201-1000
       </a>
-      <span class="phone-note">Msg &amp; data rates may apply for SMS · Reply STOP to opt out</span>
+      <span class="phone-note">Msg &amp; data rates may apply for SMS &middot; Reply STOP to opt out</span>
     </div>
+  </div>
 
-    <!-- FORM SIDE -->
+  <!-- RIGHT: the form -->
+  <div class="jt-right">
     <div id="form-wrapper">
-      <form id="lead-form" class="contact-form" novalidate>
-	  <!-- HP -->
-        <div aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden">
-          <label for="f-website">Website</label>
-          <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-name">Full Name *</label>
-            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label for="f-phone">Mobile Phone *</label>
-            <input type="tel" id="f-phone" name="phone" placeholder="(734) 555-0100" required autocomplete="tel">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-email">Email Address</label>
-            <input type="email" id="f-email" name="email" placeholder="jane@example.com" autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="f-address">Property Address *</label>
-            <input type="text" id="f-address" name="address" placeholder="123 Main St, Ann Arbor" required autocomplete="street-address">
-          </div>
-        </div>
-        <div class="form-group">
+      <div class="jt-fields" id="jt-fields">
+
+        <!-- Service select sits OUTSIDE the form element on purpose: every
+             named control inside the form is posted to JobTread, and "service"
+             is not one of its fields. It is folded into job.description on
+             submit instead. -->
+        <div class="jt-field">
           <label for="f-service">Service Needed</label>
-          <select id="f-service" name="service" autocomplete="off">
-            <option value="">Select a service…</option>
+          <select id="f-service" autocomplete="off">
+            <option value="">Select a service&hellip;</option>
             <option>Roof Inspection</option>
             <option>Roof Replacement</option>
             <option>New Roof Installation</option>
@@ -1118,28 +1239,73 @@ footer{padding:32px 0 28px}
             <option>Other / Not Sure</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="f-notes">Additional Notes</label>
-          <textarea id="f-notes" name="notes" placeholder="Any details about your roof or project…" autocomplete="off"></textarea>
-        </div>
-        <div class="sms-consent-block">
-          <label class="sms-consent-label" for="f-sms-consent">
-            <input type="checkbox" id="f-sms-consent" name="sms_consent" required>
-            <span>I agree to receive SMS text messages from <strong>Rooftop Heroes LLC</strong> regarding my service request, including inspection scheduling, appointment confirmations, estimates, and project updates. Message frequency varies based on project needs. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help. View our <a href="/privacy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">SMS Terms</a>.</span>
-          </label>
-          <p class="consent-meta">Your information is only used for communications related to your active service request. We never sell your data or send marketing messages.</p>
-        </div>
-        <button type="submit" class="submit-btn" id="submit-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Schedule My Free Inspection
-        </button>
-      </form>
 
-      <!-- SUCCESS SUMMARY — shown after Calendly confirms booking -->
+        <form id="jt-form" class="jt-formel" data-jobtread-web-form="true" data-key="22TWWAu9dHNRtGcZHdYHeytLUeHVynj2pV" data-success-message="Thank you for your submission, we will get in touch with you soon.">
+          <!-- HP -->
+          <div aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden">
+            <label for="f-website">Website</label>
+            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="jt-row">
+            <div class="jt-field">
+              <label for="f-name">Full Name <span class="jt-req">*</span></label>
+              <input id="f-name" type="text" name="contact.name" required placeholder="Jane Smith" autocomplete="name">
+            </div>
+            <div class="jt-field">
+              <label for="f-phone">Mobile Phone <span class="jt-req">*</span></label>
+              <input id="f-phone" type="tel" name="contact.custom.22PcsLebJx8V" required placeholder="(734) 555-0100" autocomplete="tel">
+            </div>
+          </div>
+          <div class="jt-row">
+            <div class="jt-field">
+              <label for="f-email">Email Address <span class="jt-req">*</span></label>
+              <input id="f-email" type="email" name="contact.custom.22PcsLebJDKu" required placeholder="jane@example.com" autocomplete="email">
+            </div>
+            <div class="jt-field">
+              <label for="f-address">Property Address <span class="jt-req">*</span></label>
+              <input id="f-address" type="text" name="location.address" required placeholder="123 Main St, Ann Arbor" autocomplete="street-address">
+            </div>
+          </div>
+          <div class="jt-field">
+            <label for="f-notes">What's Going On?</label>
+            <textarea id="f-notes" name="job.description" placeholder="Missing shingles after the last storm, a stain on the ceiling, or just due for a replacement..."></textarea>
+          </div>
+          <div class="jt-field">
+            <label for="f-files">Photos &amp; Documents</label>
+            <input id="f-files" type="file" name="account.files" multiple accept="image/*,.pdf,.heic,.heif">
+            <p class="jt-hint">Photos, PDFs, or insurance paperwork &middot; 50 MB total maximum</p>
+          </div>
+
+          <!-- value="" keeps this checkbox out of the JobTread payload (empty
+               values are skipped) while still gating both buttons natively. -->
+          <div class="sms-consent-block">
+            <label class="sms-consent-label" for="f-sms-consent">
+              <input type="checkbox" id="f-sms-consent" value="" required>
+              <span>I agree to receive SMS text messages from <strong>Rooftop Heroes LLC</strong> regarding my service request, including inspection scheduling, appointment confirmations, estimates, and project updates. Message frequency varies based on project needs. Message &amp; data rates may apply. Consent is not a condition of purchase. Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help. View our <a href="/privacy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">SMS Terms</a>.</span>
+            </label>
+            <p class="consent-meta">Your information is only used for communications related to your active service request. We never sell your data or send marketing messages.</p>
+          </div>
+
+          <div class="jt-actions">
+            <button type="submit" class="jt-submit" data-submit-button="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+              Send My Project Details
+            </button>
+            <button type="button" class="jt-submit jt-submit-alt" id="jt-schedule-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Schedule a Free Inspection
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Shown after an inspection is confirmed -->
       <div class="form-success" id="form-success">
-        <div class="success-icon">✅</div>
-        <b>Inspection Scheduled!</b>
+        <div class="success-icon">&#9989;</div>
+        <span class="success-title">Inspection Scheduled!</span>
         <div id="success-summary" style="margin-top:12px;text-align:left;background:rgba(77,163,255,.07);border:1px solid rgba(110,198,255,.18);border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.8;color:var(--t2)"></div>
+        <div id="jt-sync-status" class="jt-sync"></div>
         <br><small style="color:var(--t3)">You'll receive an SMS confirmation shortly. Reply STOP to opt out.</small>
       </div>
     </div>
@@ -1232,56 +1398,133 @@ var WORKER_URL = 'https://rooftop-heroes-scheduler.gblservers.workers.dev';
   });
 })();
 
-// ── Contact Form ──────────────────────────────────────────────────────────
+// -- Contact form: JobTread intake + inspection scheduling ------------------
 (function(){
-  var form    = document.getElementById('lead-form');
-  var btn     = document.getElementById('submit-btn');
-  var success = document.getElementById('form-success');
+  var form = document.getElementById('jt-form');
   if (!form) return;
 
-  var phoneInput = document.getElementById('f-phone');
-  if (phoneInput) {
-    phoneInput.addEventListener('input', function(){
+  var fields  = document.getElementById('jt-fields');
+  var success = document.getElementById('form-success');
+  var syncEl  = document.getElementById('jt-sync-status');
+
+  var elName  = document.getElementById('f-name');
+  var elPhone = document.getElementById('f-phone');
+  var elEmail = document.getElementById('f-email');
+  var elAddr  = document.getElementById('f-address');
+  var elSvc   = document.getElementById('f-service');
+  var elNotes = document.getElementById('f-notes');
+  var elHp    = document.getElementById('f-website');
+  var schedBtn= document.getElementById('jt-schedule-btn');
+
+  var DOW = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function prettyDate(date){
+    var d = new Date(date + 'T12:00:00');
+    return DOW[d.getDay()] + ', ' + d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  }
+
+  if (elPhone) {
+    elPhone.addEventListener('input', function(){
       var v = this.value.replace(/\D/g,'');
       if (v.length >= 10) this.value = '('+v.slice(0,3)+') '+v.slice(3,6)+'-'+v.slice(6,10);
     });
   }
 
+  // Set while submitting through the scheduler, so the appointment rides along.
+  var _appt = null;
+
+  // This script block is parsed ahead of the async web-form.js, so this submit
+  // listener is registered first and therefore runs first - letting it enrich
+  // job.description before JobTread reads the field values (which it does
+  // synchronously, before its first await).
   form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name    = document.getElementById('f-name').value.trim();
-    var phone   = document.getElementById('f-phone').value.trim();
-    var email   = document.getElementById('f-email').value.trim();
-    var address = document.getElementById('f-address').value.trim();
-    var service = document.getElementById('f-service').value;
-    var notes   = document.getElementById('f-notes').value.trim();
-    var consent = document.getElementById('f-sms-consent').checked;
-	var website = document.getElementById('f-website').value;
-
-    if (!name || !phone || !address) { alert('Please fill in your name, phone number, and property address.'); return; }
-    if (!consent) { alert('Please check the SMS consent box before submitting.'); return; }
-
-    openScheduler({ name:name, phone:phone, email:email, address:address, service:service, notes:notes, website:website }, function(date, time){
-      form.style.display = 'none';
-      var summary = document.getElementById('success-summary');
-      if (summary) {
-        var dow = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-        var d   = new Date(date + 'T12:00:00');
-        var prettyDate = dow[d.getDay()] + ', ' + d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-        var rows = [];
-        rows.push('<div><strong style="color:var(--t1)">Name:</strong> '+esc(name)+'</div>');
-        rows.push('<div><strong style="color:var(--t1)">Phone:</strong> '+esc(phone)+'</div>');
-        rows.push('<div><strong style="color:var(--t1)">Property:</strong> '+esc(address)+'</div>');
-        if (service) rows.push('<div><strong style="color:var(--t1)">Service:</strong> '+esc(service)+'</div>');
-        rows.push('<div style="margin-top:8px;color:var(--blue);font-weight:600">📅 '+esc(prettyDate)+' at '+esc(time)+'</div>');
-        if (notes) rows.push('<div style="margin-top:6px"><strong style="color:var(--t1)">Notes:</strong> '+esc(notes)+'</div>');
-        summary.innerHTML = rows.join('');
-      }
-      success.style.display = 'block';
-    });
+    if (elHp && elHp.value) { e.preventDefault(); e.stopImmediatePropagation(); return; }
+    if (!elNotes) return;
+    var base = elNotes.value;
+    var head = [];
+    if (elSvc && elSvc.value) head.push('Service needed: ' + elSvc.value);
+    if (_appt) head.push('Requested inspection: ' + _appt.pretty + ' at ' + _appt.time);
+    if (!head.length) return;
+    elNotes.value = head.join('\n') + (base ? '\n\n' + base : '');
+    setTimeout(function(){ elNotes.value = base; }, 0);
   });
 
-  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  // Run the JobTread submission without its native alert() dialogs, and report
+  // the outcome inline on the success panel instead.
+  function sendToJobTread(){
+    var settled   = false;
+    var origAlert = window.alert;
+    var okMsg     = (form.getAttribute('data-success-message') || '').trim();
+
+    function settle(ok, msg){
+      if (settled) return;
+      settled = true;
+      // async restore: JobTread's own success listener may still be mid-dispatch
+      setTimeout(function(){ window.alert = origAlert; }, 0);
+      if (!syncEl) return;
+      syncEl.className = 'jt-sync ' + (ok ? 'ok' : 'warn');
+      syncEl.textContent = ok
+        ? 'Your details and photos were sent to our team.'
+        : 'Your inspection is booked, but we could not attach your details automatically'
+          + (msg ? ' (' + msg + ')' : '') + '. We will confirm everything by phone.';
+    }
+
+    form.addEventListener('success', function(){ settle(true); }, { once:true });
+    window.alert = function(m){
+      m = String(m == null ? '' : m);
+      if (okMsg && m === okMsg) return;  // swallow JobTread's success dialog
+      settle(false, m);                  // surface its error text inline
+    };
+    setTimeout(function(){ settle(false, 'timed out'); }, 180000);
+
+    if (form.requestSubmit) form.requestSubmit();
+    else form.dispatchEvent(new Event('submit', { cancelable:true, bubbles:true }));
+  }
+
+  function showSuccess(lead, date, time){
+    var summary = document.getElementById('success-summary');
+    if (summary) {
+      var rows = [];
+      rows.push('<div><strong style="color:var(--t1)">Name:</strong> '+esc(lead.name)+'</div>');
+      rows.push('<div><strong style="color:var(--t1)">Phone:</strong> '+esc(lead.phone)+'</div>');
+      rows.push('<div><strong style="color:var(--t1)">Property:</strong> '+esc(lead.address)+'</div>');
+      if (lead.service) rows.push('<div><strong style="color:var(--t1)">Service:</strong> '+esc(lead.service)+'</div>');
+      rows.push('<div style="margin-top:8px;color:var(--blue);font-weight:600">📅 '+esc(prettyDate(date))+' at '+esc(time)+'</div>');
+      if (lead.notes) rows.push('<div style="margin-top:6px"><strong style="color:var(--t1)">Notes:</strong> '+esc(lead.notes)+'</div>');
+      summary.innerHTML = rows.join('');
+    }
+    if (fields)  fields.style.display  = 'none';
+    if (success) success.style.display = 'block';
+  }
+
+  if (schedBtn) {
+    schedBtn.addEventListener('click', function(){
+      if (!form.reportValidity()) return;
+
+      var lead = {
+        name:    elName  ? elName.value.trim()  : '',
+        phone:   elPhone ? elPhone.value.trim() : '',
+        email:   elEmail ? elEmail.value.trim() : '',
+        address: elAddr  ? elAddr.value.trim()  : '',
+        service: elSvc   ? elSvc.value          : '',
+        notes:   elNotes ? elNotes.value.trim() : '',
+        website: elHp    ? elHp.value           : ''
+      };
+
+      // openScheduler books the slot with the worker first; this fires only
+      // once /api/book has confirmed it.
+      openScheduler(lead, function(date, time){
+        _appt = { date:date, time:time, pretty:prettyDate(date) };
+        if (syncEl) {
+          syncEl.className = 'jt-sync';
+          syncEl.textContent = 'Sending your details and photos to our team…';
+        }
+        sendToJobTread();   // reads the field values synchronously
+        _appt = null;
+        showSuccess(lead, date, time);
+      });
+    });
+  }
 })();
 
 // ── Scheduler State ───────────────────────────────────────────────────────
@@ -1411,11 +1654,6 @@ function showTimesState(state) {
 function closeScheduler() {
   document.getElementById('sched-overlay').classList.remove('open');
   document.body.style.overflow = '';
-  var submitBtn = document.getElementById('submit-btn');
-  if (submitBtn) {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Schedule My Free Inspection';
-  }
 }
 
 function showSchedErr(msg) {
@@ -1661,6 +1899,9 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </div>
 
+
+<!-- JobTread web form initializer (must load after the form markup) -->
+<script async src="https://app.jobtread.com/web-form.js"></script>
 
 </body>
 </html>
